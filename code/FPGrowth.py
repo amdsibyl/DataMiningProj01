@@ -1,7 +1,9 @@
 import numpy as np
 import pandas as pd
+import csv
 from collections import defaultdict, namedtuple
 import re
+import time
 
 class FPTree(object):
 	Route = namedtuple('Route', 'Head, Tail')
@@ -11,9 +13,9 @@ class FPTree(object):
 
 	@property
 	def root(self): return self._root
-	def add(self, transaction):
+	def add(self, itembag):
 		pointer = self._root
-		for i in transaction:
+		for i in itembag:
 			next_pointer = pointer.search(i)
 			if next_pointer: next_pointer.increment_count()
 			else:
@@ -34,6 +36,7 @@ class FPTree(object):
 	def items(self):
 		for item in self._routes.keys():
 			yield (item, self.nodes(item))
+
 	def nodes(self, item):
 		try: node = self._routes[item][0]
 		except KeyError: return
@@ -74,7 +77,7 @@ class FPNode(object):
 			raise TypeError("Only FPNodes can be added as children")
 		if not child.item in self._children:
 			self._children[child.item] = child
-			child.parent = self
+			child._parent = self
 
 	def search(self, item):
 		try: return self._children[item]
@@ -155,21 +158,21 @@ def conditional_tree_from_paths(paths):
 
 	return tree
 
-def find_frequent_items(itembags, min_support, include_support=False):
-	data_dict = defaultdict(lambda: 0) # mapping from items to their supports
+def find_frequent_items(itembags, min_support):
+	data_dict = defaultdict(lambda: 0)
 	# Load items and count the support
 	for itembag in itembags:
 		for item in itembag: data_dict[item] += 1
 
-	# Remove infrequent items from the item support dictionary.
+	# Remove infrequent items from the item support dictionary
 	data_dict = dict((item, support) for item, support in data_dict.items() if support >= min_support)
 
-	def sorting_transaction(items):
-		items = sorted((v for v in items if v in data_dict), reverse=True, key=lambda v: data_dict[v])
+	def sorting(items):
+		items = sorted((v for v in items if v in data_dict), reverse=True, key=lambda v: (data_dict[v], v))
 		return items
 
 	masterTree = FPTree()
-	for t in map(sorting_transaction, itembags): masterTree.add(t)
+	for t in map(sorting, itembags): masterTree.add(t)
 	masterTree.inspect()
 
 	def find_with_suffix(tree, suffix):
@@ -177,7 +180,7 @@ def find_frequent_items(itembags, min_support, include_support=False):
 			support = sum(n.count for n in nodes)
 			if support >= min_support and item not in suffix:
 				found_set = [item] + suffix
-				yield (found_set, support) if include_support else found_set
+				yield (found_set, support)
 
 				cond_tree = conditional_tree_from_paths(tree.prefix_paths(item))
 				find_with_suffix(cond_tree, found_set)
@@ -198,7 +201,7 @@ item_bag = [[None]] * len(titanic)
 # Columns : Survived, Pclass, Sex, Age, Embarked
 # Survived indexing
 data_survived = np.array(titanic.iloc[:, 0], int)
-survived_title = ['Survived', 'Not Survived', 'Not Sure if Survived']
+survived_title = ['Survived', 'Not_Survived', 'Not_sure_if_Survived']
 for i, s in np.ndenumerate(data_survived):
 	index = -1
 	if s==1: index = 0
@@ -215,7 +218,7 @@ for i, s in np.ndenumerate(data_pclass):
 
 # Sex indexing
 data_sex = np.array(titanic.iloc[:, 2])
-sex_title = ['Male', 'Female', 'Not Sure Sex']
+sex_title = ['Male', 'Female', 'Not_Sure_Sex']
 for i, s in np.ndenumerate(data_sex):
 	index = -1
 	if s=="male": index = 0 
@@ -236,7 +239,7 @@ for i, s in np.ndenumerate(data_age):
 
 # Embarked : C / S / Q
 data_embarked = np.array(titanic.iloc[:, 4])
-embark_title = ['Embark at C', 'Embark at S', 'Embark at Q', 'Not Sure Where the Passenger Embark at']
+embark_title = ['Embarked_at_C', 'Embarked_at_S', 'Embarked_at_Q', 'Not_Sure_Where_the_Passenger_Embarked_at']
 for i, s in np.ndenumerate(data_embarked):
 	index = -1
 	if(s=='C'):index = 0
@@ -244,8 +247,13 @@ for i, s in np.ndenumerate(data_embarked):
 	elif(s=='Q'):index = 2
 	item_bag[i[0]].append(embark_title[index])
 
+# Writing edited data to csv
+with open('../dataset/Titanic/edited_'+data_name_list[0].split('/')[-1], 'w') as f:	
+	writer = csv.writer(f)
+	writer.writerows(item_bag)
+
 itemlist = [item_bag]
-min_support = [200]
+min_support = [int(0.2*len(titanic))]
 ###########################
 # Dataset2 : IBM Quest Data Generator dataset (w/ [nitems_0.1, ntrans_0.1], [nitems_0.1, ntrans_1], [nitems_1, ntrans_0.1])
 for i in [0.1, 1]:
@@ -253,26 +261,29 @@ for i in [0.1, 1]:
 		if i == 1 and j == 1: continue
 		data_name_list.append('../dataset/ibm/data.nitems_{}.ntrans_{}'.format(i, j))
 
-sup = [15, 100, 5]
+sup = [0.15, 0.1, 0.05]
 for i in range(1, len(data_name_list)):
 	item_bag = [[None]]
 	ibm_data = open(data_name_list[i], 'r')
 	counter = 0
-	for line in ibm_data.readlines():
-		item = re.split(r'[\s:]+',line.strip(' ').strip('\n'))
-		if item_bag == [[None]]:
-			item_bag = [[item[-1]]]
-		elif int(float(item[0])) == counter+1:
-			item_bag[counter].append(item[-1])
-		else:
-			item_bag.append([item[-1]])
-			counter += 1
-
+	with open('../dataset/ibm/'+data_name_list[i].split('/')[-1]+'.csv', 'w') as f:	
+		writer = csv.writer(f)
+		for line in ibm_data.readlines():
+			item = re.split(r'[\s:]+',line.strip(' ').strip('\n'))
+			if item_bag == [[None]]:
+				item_bag = [[item[-1]]]
+			elif int(float(item[0])) == counter+1:
+				item_bag[counter].append(item[-1])
+			else: # New Transaction
+				writer.writerow(item_bag[counter])
+				item_bag.append([item[-1]])
+				counter += 1
+		writer.writerow(item_bag[counter])
 	itemlist.append(item_bag)
-	min_support.append(sup[i-1])
-
+	min_support.append(int(sup[i-1] * counter))
+	
 ### test data ###
-"""
+'''
 data = [
 ['Milk', 'Bread', 'Beer'],
 ['Bread', 'Coffee'],
@@ -284,18 +295,39 @@ data = [
 ['Milk', 'Bread', 'Egg', 'Beer'],
 ['Milk', 'Bread', 'Egg']
 ]
+with open('../dataset/test.csv', 'w') as f:
+	writer = csv.writer(f)
+	writer.writerows(data)
+
 item_bag = data
-min_support = 3
-"""
+min_support[0] = 2
+data_ = [data]
+
+data = [['牛奶', '麵包'],
+['麵包', '尿布', '啤酒', '雞蛋'],
+['牛奶', '尿布', '啤酒', '可樂'],
+['啤酒', '麵包', '牛奶', '尿布'],
+['麵包', '牛奶', '尿布', '可樂']]
+item_bag=data
+min_support[0]=2
+data_=[data]
+'''
 ###########################
+
 for i in range(len(data_name_list)):
+#for i in range(len(data_)):
 	print('Dataset {}: {} w/ min_support = {}'.format(i+1, data_name_list[i].split('/')[-1], min_support[i]))
 	results = []
-	for itemset, support in find_frequent_items(itemlist[i], min_support[i], True):
+	startTime = time.time()
+	for itemset, support in find_frequent_items(itemlist[i], min_support[i]):
+	#for itemset, support in find_frequent_items(data, min_support[i]):
 		results.append((itemset, support))
-	results = sorted((v for v in results),reverse = True, key = lambda v: v[1])
+	results = sorted((v for v in results),reverse = True, key = lambda v: (v[1],v[0]))
 	print('\nFrequent Patterns whose appearance is >= min_support({}): '.format(min_support[i]))
 	for itemset, support in results:
 		print('\t{} {}'.format(itemset,support))
 	print('###########################')
+	print('Spent Time:{} s'.format(time.time()-startTime))
+	print('###########################')
+
 

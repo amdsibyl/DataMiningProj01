@@ -1,23 +1,29 @@
-Dataset 1: train.csv w/ min_support = 200
+Dataset 1: train.csv w/ min_support = 178
 Tree:
 <FPNode (root)>
-	<FPNode 'Embark at S' (644)>
+	<FPNode 'Embarked_at_S' (644)>
 		<FPNode 'Male' (441)>
-			<FPNode 'Not Survived' (364)>
+			<FPNode 'Not_Survived' (364)>
 				<FPNode 'Pclass3' (231)>
 					<FPNode 'Adult(19~40)' (127)>
 					<FPNode 'Kids(0~8)' (54)>
 				<FPNode 'Pclass1' (25)>
 				<FPNode 'Adult(19~40)' (67)>
+					<FPNode 'Pclass2' (52)>
 					<FPNode 'Pclass1' (15)>
+				<FPNode 'Pclass2' (24)>
 				<FPNode 'Kids(0~8)' (17)>
 					<FPNode 'Pclass1' (11)>
+					<FPNode 'Pclass2' (6)>
 			<FPNode 'Survived' (27)>
 				<FPNode 'Kids(0~8)' (15)>
+					<FPNode 'Pclass2' (9)>
 					<FPNode 'Pclass1' (6)>
 				<FPNode 'Pclass1' (10)>
+				<FPNode 'Pclass2' (2)>
 			<FPNode 'Adult(19~40)' (16)>
 				<FPNode 'Survived' (16)>
+					<FPNode 'Pclass2' (4)>
 					<FPNode 'Pclass1' (12)>
 			<FPNode 'Pclass3' (34)>
 				<FPNode 'Adult(19~40)' (19)>
@@ -35,12 +41,15 @@ Tree:
 			<FPNode 'Survived' (63)>
 				<FPNode 'Female' (63)>
 					<FPNode 'Pclass1' (25)>
+					<FPNode 'Pclass2' (38)>
 		<FPNode 'Survived' (44)>
 			<FPNode 'Female' (44)>
 				<FPNode 'Pclass1' (17)>
+				<FPNode 'Pclass2' (15)>
 				<FPNode 'Kids(0~8)' (12)>
+					<FPNode 'Pclass2' (8)>
 					<FPNode 'Pclass1' (4)>
-		<FPNode 'Not Survived' (63)>
+		<FPNode 'Not_Survived' (63)>
 			<FPNode 'Pclass3' (55)>
 				<FPNode 'Female' (33)>
 					<FPNode 'Kids(0~8)' (16)>
@@ -48,24 +57,30 @@ Tree:
 					<FPNode 'Female' (22)>
 			<FPNode 'Adult(19~40)' (5)>
 				<FPNode 'Female' (5)>
+					<FPNode 'Pclass2' (4)>
 					<FPNode 'Pclass1' (1)>
 			<FPNode 'Female' (3)>
 				<FPNode 'Kids(0~8)' (1)>
 					<FPNode 'Pclass1' (1)>
+				<FPNode 'Pclass2' (2)>
 	<FPNode 'Adult(19~40)' (27)>
 		<FPNode 'Survived' (27)>
 			<FPNode 'Female' (27)>
 				<FPNode 'Pclass1' (22)>
+				<FPNode 'Pclass2' (5)>
 	<FPNode 'Male' (136)>
-		<FPNode 'Not Survived' (104)>
+		<FPNode 'Not_Survived' (104)>
 			<FPNode 'Pclass3' (69)>
 				<FPNode 'Kids(0~8)' (42)>
 				<FPNode 'Adult(19~40)' (21)>
 			<FPNode 'Adult(19~40)' (16)>
 				<FPNode 'Pclass1' (9)>
+				<FPNode 'Pclass2' (7)>
 			<FPNode 'Pclass1' (12)>
 			<FPNode 'Kids(0~8)' (6)>
 				<FPNode 'Pclass1' (5)>
+				<FPNode 'Pclass2' (1)>
+			<FPNode 'Pclass2' (1)>
 		<FPNode 'Pclass3' (13)>
 			<FPNode 'Survived' (7)>
 				<FPNode 'Kids(0~8)' (6)>
@@ -77,11 +92,14 @@ Tree:
 		<FPNode 'Survived' (9)>
 			<FPNode 'Pclass1' (6)>
 			<FPNode 'Kids(0~8)' (3)>
+				<FPNode 'Pclass2' (2)>
 				<FPNode 'Pclass1' (1)>
 	<FPNode 'Survived' (27)>
 		<FPNode 'Female' (27)>
+			<FPNode 'Pclass2' (2)>
 			<FPNode 'Kids(0~8)' (7)>
 				<FPNode 'Pclass1' (5)>
+				<FPNode 'Pclass2' (2)>
 			<FPNode 'Pclass1' (18)>
 	<FPNode 'Pclass3' (39)>
 		<FPNode 'Survived' (35)>
@@ -90,7 +108,7 @@ Tree:
 		<FPNode 'Adult(19~40)' (4)>
 			<FPNode 'Survived' (4)>
 				<FPNode 'Female' (4)>
-	<FPNode 'Not Survived' (18)>
+	<FPNode 'Not_Survived' (18)>
 		<FPNode 'Pclass3' (17)>
 			<FPNode 'Female' (13)>
 				<FPNode 'Kids(0~8)' (7)>
@@ -100,16 +118,16 @@ Tree:
 			<FPNode 'Pclass1' (1)>
 
 Routes:
-	'Embark at S'
-		-<FPNode 'Embark at S' (644)>
+	'Embarked_at_S'
+		-<FPNode 'Embarked_at_S' (644)>
 	'Male'
 		-<FPNode 'Male' (441)>
 		-<FPNode 'Male' (136)>
-	'Not Survived'
-		-<FPNode 'Not Survived' (364)>
-		-<FPNode 'Not Survived' (104)>
-		-<FPNode 'Not Survived' (63)>
-		-<FPNode 'Not Survived' (18)>
+	'Not_Survived'
+		-<FPNode 'Not_Survived' (364)>
+		-<FPNode 'Not_Survived' (104)>
+		-<FPNode 'Not_Survived' (63)>
+		-<FPNode 'Not_Survived' (18)>
 	'Pclass3'
 		-<FPNode 'Pclass3' (231)>
 		-<FPNode 'Pclass3' (33)>
@@ -206,40 +224,64 @@ Routes:
 		-<FPNode 'Kids(0~8)' (17)>
 		-<FPNode 'Kids(0~8)' (1)>
 		-<FPNode 'Kids(0~8)' (3)>
+	'Pclass2'
+		-<FPNode 'Pclass2' (2)>
+		-<FPNode 'Pclass2' (15)>
+		-<FPNode 'Pclass2' (9)>
+		-<FPNode 'Pclass2' (52)>
+		-<FPNode 'Pclass2' (4)>
+		-<FPNode 'Pclass2' (24)>
+		-<FPNode 'Pclass2' (4)>
+		-<FPNode 'Pclass2' (2)>
+		-<FPNode 'Pclass2' (38)>
+		-<FPNode 'Pclass2' (8)>
+		-<FPNode 'Pclass2' (7)>
+		-<FPNode 'Pclass2' (1)>
+		-<FPNode 'Pclass2' (6)>
+		-<FPNode 'Pclass2' (2)>
+		-<FPNode 'Pclass2' (5)>
+		-<FPNode 'Pclass2' (2)>
+		-<FPNode 'Pclass2' (1)>
+		-<FPNode 'Pclass2' (2)>
 
-Frequent Patterns whose appearance is >= min_support(200): 
-	['Embark at S'] 644
+Frequent Patterns whose appearance is >= min_support(178): 
+	['Embarked_at_S'] 644
 	['Male'] 577
-	['Not Survived'] 549
+	['Not_Survived'] 549
 	['Pclass3'] 491
-	['Male', 'Not Survived'] 468
-	['Embark at S', 'Male'] 441
-	['Embark at S', 'Not Survived'] 427
+	['Male', 'Not_Survived'] 468
+	['Embarked_at_S', 'Male'] 441
+	['Embarked_at_S', 'Not_Survived'] 427
 	['Adult(19~40)'] 427
-	['Not Survived', 'Pclass3'] 372
-	['Embark at S', 'Male', 'Not Survived'] 364
-	['Embark at S', 'Pclass3'] 353
+	['Not_Survived', 'Pclass3'] 372
+	['Embarked_at_S', 'Male', 'Not_Survived'] 364
+	['Embarked_at_S', 'Pclass3'] 353
 	['Male', 'Pclass3'] 347
 	['Survived'] 342
-	['Embark at S', 'Adult(19~40)'] 339
+	['Embarked_at_S', 'Adult(19~40)'] 339
 	['Female'] 314
-	['Male', 'Not Survived', 'Pclass3'] 300
-	['Embark at S', 'Not Survived', 'Pclass3'] 286
+	['Male', 'Not_Survived', 'Pclass3'] 300
+	['Embarked_at_S', 'Not_Survived', 'Pclass3'] 286
 	['Male', 'Adult(19~40)'] 282
-	['Embark at S', 'Male', 'Pclass3'] 265
-	['Not Survived', 'Adult(19~40)'] 262
+	['Embarked_at_S', 'Male', 'Pclass3'] 265
+	['Not_Survived', 'Adult(19~40)'] 262
 	['Survived', 'Female'] 233
-	['Embark at S', 'Male', 'Not Survived', 'Pclass3'] 231
-	['Male', 'Not Survived', 'Adult(19~40)'] 231
+	['Male', 'Not_Survived', 'Adult(19~40)'] 231
 	['Kids(0~8)'] 231
-	['Embark at S', 'Male', 'Adult(19~40)'] 229
+	['Embarked_at_S', 'Male', 'Not_Survived', 'Pclass3'] 231
+	['Embarked_at_S', 'Male', 'Adult(19~40)'] 229
 	['Pclass3', 'Adult(19~40)'] 223
-	['Embark at S', 'Not Survived', 'Adult(19~40)'] 221
-	['Embark at S', 'Survived'] 217
+	['Embarked_at_S', 'Not_Survived', 'Adult(19~40)'] 221
+	['Embarked_at_S', 'Survived'] 217
 	['Pclass1'] 216
-	['Embark at S', 'Female'] 203
+	['Embarked_at_S', 'Female'] 203
+	['Embarked_at_S', 'Male', 'Not_Survived', 'Adult(19~40)'] 194
+	['Embarked_at_S', 'Pclass3', 'Adult(19~40)'] 188
+	['Pclass2'] 184
 ###########################
-Dataset 2: data.nitems_0.1.ntrans_0.1 w/ min_support = 15
+Spent Time:0.012546062469482422 s
+###########################
+Dataset 2: data.nitems_0.1.ntrans_0.1 w/ min_support = 14
 Tree:
 <FPNode (root)>
 	<FPNode '38' (43)>
@@ -251,154 +293,181 @@ Tree:
 					<FPNode '11' (1)>
 						<FPNode '35' (1)>
 							<FPNode '93' (1)>
-			<FPNode '36' (7)>
+			<FPNode '36' (6)>
 				<FPNode '8' (1)>
 					<FPNode '17' (1)>
 						<FPNode '43' (1)>
 							<FPNode '83' (1)>
-				<FPNode '87' (1)>
-					<FPNode '35' (1)>
-						<FPNode '74' (1)>
 				<FPNode '69' (2)>
 					<FPNode '85' (1)>
 						<FPNode '8' (1)>
 							<FPNode '17' (1)>
-								<FPNode '3' (1)>
-									<FPNode '35' (1)>
+								<FPNode '35' (1)>
+									<FPNode '3' (1)>
 										<FPNode '61' (1)>
+											<FPNode '12' (1)>
 					<FPNode '48' (1)>
 						<FPNode '85' (1)>
 							<FPNode '8' (1)>
 								<FPNode '43' (1)>
 									<FPNode '40' (1)>
 										<FPNode '74' (1)>
+											<FPNode '14' (1)>
+												<FPNode '12' (1)>
 				<FPNode '48' (2)>
 					<FPNode '81' (1)>
-						<FPNode '11' (1)>
-							<FPNode '17' (1)>
+						<FPNode '17' (1)>
+							<FPNode '11' (1)>
 								<FPNode '43' (1)>
 					<FPNode '8' (1)>
-						<FPNode '11' (1)>
-							<FPNode '17' (1)>
+						<FPNode '17' (1)>
+							<FPNode '11' (1)>
 								<FPNode '43' (1)>
-									<FPNode '3' (1)>
+									<FPNode '80' (1)>
 										<FPNode '35' (1)>
-											<FPNode '80' (1)>
+											<FPNode '3' (1)>
 												<FPNode '61' (1)>
 				<FPNode '43' (1)>
-					<FPNode '40' (1)>
-						<FPNode '61' (1)>
+					<FPNode '61' (1)>
+						<FPNode '40' (1)>
+							<FPNode '62' (1)>
+								<FPNode '14' (1)>
 			<FPNode '11' (1)>
+				<FPNode '14' (1)>
 			<FPNode '48' (1)>
 				<FPNode '85' (1)>
 					<FPNode '43' (1)>
 						<FPNode '35' (1)>
-							<FPNode '40' (1)>
-								<FPNode '61' (1)>
+							<FPNode '61' (1)>
+								<FPNode '40' (1)>
+									<FPNode '62' (1)>
 			<FPNode '8' (1)>
 				<FPNode '28' (1)>
-					<FPNode '3' (1)>
-						<FPNode '35' (1)>
+					<FPNode '35' (1)>
+						<FPNode '3' (1)>
 							<FPNode '39' (1)>
-			<FPNode '87' (3)>
+								<FPNode '86' (1)>
+									<FPNode '14' (1)>
+			<FPNode '87' (4)>
 				<FPNode '48' (2)>
 					<FPNode '8' (1)>
 						<FPNode '43' (1)>
 							<FPNode '72' (1)>
+								<FPNode '62' (1)>
+									<FPNode '12' (1)>
 					<FPNode '43' (1)>
+				<FPNode '36' (1)>
+					<FPNode '35' (1)>
+						<FPNode '74' (1)>
+							<FPNode '62' (1)>
 				<FPNode '72' (1)>
-			<FPNode '35' (1)>
-				<FPNode '80' (1)>
+					<FPNode '62' (1)>
+						<FPNode '12' (1)>
+			<FPNode '80' (1)>
+				<FPNode '35' (1)>
 					<FPNode '89' (1)>
 		<FPNode '69' (3)>
 			<FPNode '85' (1)>
 				<FPNode '8' (1)>
 					<FPNode '83' (1)>
 						<FPNode '93' (1)>
+							<FPNode '14' (1)>
 			<FPNode '48' (1)>
 				<FPNode '35' (1)>
-					<FPNode '40' (1)>
-						<FPNode '61' (1)>
-							<FPNode '74' (1)>
+					<FPNode '61' (1)>
+						<FPNode '40' (1)>
+							<FPNode '93' (1)>
 								<FPNode '89' (1)>
-									<FPNode '93' (1)>
+									<FPNode '74' (1)>
+										<FPNode '14' (1)>
 			<FPNode '8' (1)>
 				<FPNode '72' (1)>
 		<FPNode '85' (1)>
 			<FPNode '8' (1)>
+				<FPNode '62' (1)>
 		<FPNode '48' (5)>
 			<FPNode '17' (1)>
 				<FPNode '83' (1)>
 					<FPNode '80' (1)>
 			<FPNode '40' (1)>
 				<FPNode '74' (1)>
-			<FPNode '3' (1)>
-				<FPNode '80' (1)>
+			<FPNode '80' (1)>
+				<FPNode '3' (1)>
+					<FPNode '12' (1)>
 			<FPNode '85' (1)>
 				<FPNode '81' (1)>
 					<FPNode '11' (1)>
 						<FPNode '93' (1)>
+							<FPNode '14' (1)>
 			<FPNode '72' (1)>
-				<FPNode '89' (1)>
-					<FPNode '93' (1)>
-		<FPNode '17' (1)>
+				<FPNode '93' (1)>
+					<FPNode '89' (1)>
+		<FPNode '17' (2)>
 			<FPNode '40' (1)>
-				<FPNode '74' (1)>
-					<FPNode '93' (1)>
-		<FPNode '81' (2)>
+				<FPNode '93' (1)>
+					<FPNode '74' (1)>
+			<FPNode '11' (1)>
+				<FPNode '3' (1)>
+					<FPNode '12' (1)>
+		<FPNode '81' (3)>
+			<FPNode '8' (1)>
+				<FPNode '28' (1)>
+					<FPNode '3' (1)>
+						<FPNode '62' (1)>
 			<FPNode '80' (1)>
 				<FPNode '40' (1)>
-		<FPNode '36' (8)>
-			<FPNode '87' (5)>
+		<FPNode '87' (8)>
+			<FPNode '36' (5)>
 				<FPNode '69' (1)>
 					<FPNode '85' (1)>
 						<FPNode '81' (1)>
 							<FPNode '3' (1)>
 				<FPNode '48' (1)>
 					<FPNode '8' (1)>
-						<FPNode '28' (1)>
-							<FPNode '43' (1)>
+						<FPNode '43' (1)>
+							<FPNode '28' (1)>
 								<FPNode '89' (1)>
 				<FPNode '43' (1)>
-					<FPNode '3' (1)>
-						<FPNode '80' (1)>
-							<FPNode '40' (1)>
-								<FPNode '61' (1)>
+					<FPNode '80' (1)>
+						<FPNode '3' (1)>
+							<FPNode '61' (1)>
+								<FPNode '40' (1)>
 				<FPNode '72' (1)>
-					<FPNode '39' (1)>
-						<FPNode '74' (1)>
+					<FPNode '74' (1)>
+						<FPNode '39' (1)>
+							<FPNode '14' (1)>
 				<FPNode '80' (1)>
-			<FPNode '11' (1)>
-				<FPNode '28' (1)>
-			<FPNode '28' (1)>
-				<FPNode '80' (1)>
-					<FPNode '89' (1)>
-			<FPNode '69' (1)>
-				<FPNode '48' (1)>
-					<FPNode '81' (1)>
-						<FPNode '83' (1)>
-							<FPNode '35' (1)>
-								<FPNode '39' (1)>
-		<FPNode '8' (1)>
-			<FPNode '81' (1)>
-				<FPNode '28' (1)>
-					<FPNode '3' (1)>
-		<FPNode '87' (3)>
+					<FPNode '14' (1)>
 			<FPNode '69' (2)>
 				<FPNode '48' (2)>
 					<FPNode '85' (1)>
 						<FPNode '28' (1)>
 							<FPNode '83' (1)>
 								<FPNode '89' (1)>
+									<FPNode '12' (1)>
 					<FPNode '28' (1)>
 						<FPNode '93' (1)>
+							<FPNode '86' (1)>
 			<FPNode '35' (1)>
-		<FPNode '11' (2)>
-			<FPNode '17' (1)>
-				<FPNode '3' (1)>
+				<FPNode '86' (1)>
+		<FPNode '36' (3)>
+			<FPNode '11' (1)>
+				<FPNode '28' (1)>
+			<FPNode '28' (1)>
+				<FPNode '80' (1)>
+					<FPNode '89' (1)>
+						<FPNode '14' (1)>
+			<FPNode '69' (1)>
+				<FPNode '48' (1)>
+					<FPNode '81' (1)>
+						<FPNode '83' (1)>
+							<FPNode '35' (1)>
+								<FPNode '39' (1)>
+		<FPNode '11' (1)>
 		<FPNode '83' (1)>
 			<FPNode '80' (1)>
 				<FPNode '61' (1)>
+					<FPNode '12' (1)>
 	<FPNode '8' (3)>
 		<FPNode '43' (1)>
 			<FPNode '80' (1)>
@@ -406,8 +475,9 @@ Tree:
 					<FPNode '39' (1)>
 		<FPNode '72' (1)>
 	<FPNode '63' (16)>
-		<FPNode '36' (5)>
+		<FPNode '36' (4)>
 			<FPNode '61' (1)>
+				<FPNode '62' (1)>
 			<FPNode '48' (2)>
 				<FPNode '17' (2)>
 					<FPNode '43' (1)>
@@ -416,126 +486,118 @@ Tree:
 								<FPNode '61' (1)>
 									<FPNode '74' (1)>
 					<FPNode '28' (1)>
-			<FPNode '87' (1)>
-				<FPNode '81' (1)>
-					<FPNode '83' (1)>
-						<FPNode '74' (1)>
 			<FPNode '69' (1)>
+				<FPNode '62' (1)>
 		<FPNode '85' (2)>
 			<FPNode '11' (1)>
+				<FPNode '86' (1)>
+					<FPNode '12' (1)>
 			<FPNode '8' (1)>
 				<FPNode '40' (1)>
 					<FPNode '89' (1)>
-		<FPNode '87' (4)>
+		<FPNode '87' (5)>
 			<FPNode '11' (1)>
 				<FPNode '83' (1)>
+					<FPNode '62' (1)>
+						<FPNode '12' (1)>
 			<FPNode '69' (2)>
 				<FPNode '80' (1)>
+					<FPNode '62' (1)>
 				<FPNode '81' (1)>
-					<FPNode '11' (1)>
-						<FPNode '17' (1)>
+					<FPNode '17' (1)>
+						<FPNode '11' (1)>
 							<FPNode '43' (1)>
 								<FPNode '72' (1)>
+			<FPNode '36' (1)>
+				<FPNode '81' (1)>
+					<FPNode '83' (1)>
+						<FPNode '74' (1)>
 			<FPNode '85' (1)>
+				<FPNode '86' (1)>
 		<FPNode '17' (1)>
 			<FPNode '83' (1)>
 		<FPNode '43' (1)>
 			<FPNode '83' (1)>
+				<FPNode '86' (1)>
 		<FPNode '11' (1)>
 			<FPNode '28' (1)>
-				<FPNode '3' (1)>
-					<FPNode '80' (1)>
-						<FPNode '61' (1)>
-							<FPNode '72' (1)>
+				<FPNode '80' (1)>
+					<FPNode '3' (1)>
+						<FPNode '72' (1)>
+							<FPNode '61' (1)>
 								<FPNode '39' (1)>
 		<FPNode '8' (1)>
 			<FPNode '17' (1)>
 				<FPNode '39' (1)>
 		<FPNode '69' (1)>
 			<FPNode '28' (1)>
-				<FPNode '39' (1)>
-					<FPNode '93' (1)>
-	<FPNode '36' (7)>
-		<FPNode '87' (1)>
+				<FPNode '93' (1)>
+					<FPNode '39' (1)>
+	<FPNode '87' (10)>
+		<FPNode '36' (1)>
 			<FPNode '85' (1)>
 				<FPNode '81' (1)>
 					<FPNode '17' (1)>
 						<FPNode '35' (1)>
 							<FPNode '39' (1)>
-		<FPNode '81' (1)>
-			<FPNode '11' (1)>
-				<FPNode '28' (1)>
-		<FPNode '11' (1)>
-			<FPNode '28' (1)>
-				<FPNode '43' (1)>
-					<FPNode '35' (1)>
-		<FPNode '85' (1)>
-			<FPNode '35' (1)>
-		<FPNode '69' (2)>
-			<FPNode '28' (1)>
-			<FPNode '81' (1)>
-				<FPNode '72' (1)>
-		<FPNode '48' (1)>
-			<FPNode '11' (1)>
-				<FPNode '17' (1)>
-					<FPNode '83' (1)>
-	<FPNode '72' (1)>
-	<FPNode '81' (4)>
-		<FPNode '11' (2)>
-			<FPNode '3' (1)>
-				<FPNode '80' (1)>
-					<FPNode '61' (1)>
-						<FPNode '74' (1)>
-							<FPNode '89' (1)>
-			<FPNode '40' (1)>
-		<FPNode '61' (1)>
-		<FPNode '17' (1)>
-			<FPNode '28' (1)>
-				<FPNode '83' (1)>
-					<FPNode '35' (1)>
-	<FPNode '87' (9)>
 		<FPNode '69' (4)>
 			<FPNode '39' (1)>
-			<FPNode '8' (1)>
-				<FPNode '81' (1)>
+			<FPNode '81' (2)>
+				<FPNode '8' (1)>
 					<FPNode '43' (1)>
 						<FPNode '89' (1)>
-			<FPNode '81' (1)>
 				<FPNode '28' (1)>
-					<FPNode '39' (1)>
-						<FPNode '93' (1)>
+					<FPNode '93' (1)>
+						<FPNode '39' (1)>
 			<FPNode '85' (1)>
 				<FPNode '8' (1)>
 					<FPNode '35' (1)>
-						<FPNode '61' (1)>
-							<FPNode '72' (1)>
+						<FPNode '72' (1)>
+							<FPNode '61' (1)>
 								<FPNode '39' (1)>
+									<FPNode '86' (1)>
 		<FPNode '48' (1)>
 			<FPNode '28' (1)>
 				<FPNode '80' (1)>
-					<FPNode '61' (1)>
-						<FPNode '72' (1)>
-							<FPNode '39' (1)>
-								<FPNode '89' (1)>
+					<FPNode '72' (1)>
+						<FPNode '61' (1)>
+							<FPNode '89' (1)>
+								<FPNode '39' (1)>
+									<FPNode '86' (1)>
+										<FPNode '12' (1)>
 		<FPNode '85' (4)>
 			<FPNode '8' (2)>
-				<FPNode '11' (1)>
-					<FPNode '17' (1)>
-						<FPNode '3' (1)>
-							<FPNode '80' (1)>
+				<FPNode '17' (2)>
+					<FPNode '11' (1)>
+						<FPNode '80' (1)>
+							<FPNode '3' (1)>
 								<FPNode '72' (1)>
-									<FPNode '74' (1)>
-										<FPNode '89' (1)>
-				<FPNode '17' (1)>
+									<FPNode '89' (1)>
+										<FPNode '74' (1)>
 					<FPNode '28' (1)>
 						<FPNode '40' (1)>
 							<FPNode '39' (1)>
 			<FPNode '35' (1)>
 			<FPNode '81' (1)>
 				<FPNode '83' (1)>
-					<FPNode '39' (1)>
+					<FPNode '93' (1)>
 						<FPNode '89' (1)>
-							<FPNode '93' (1)>
+							<FPNode '39' (1)>
+	<FPNode '72' (1)>
+	<FPNode '81' (4)>
+		<FPNode '11' (2)>
+			<FPNode '80' (1)>
+				<FPNode '3' (1)>
+					<FPNode '61' (1)>
+						<FPNode '89' (1)>
+							<FPNode '74' (1)>
+								<FPNode '14' (1)>
+			<FPNode '40' (1)>
+		<FPNode '61' (1)>
+		<FPNode '17' (1)>
+			<FPNode '28' (1)>
+				<FPNode '83' (1)>
+					<FPNode '35' (1)>
 	<FPNode '40' (1)>
 	<FPNode '85' (3)>
 		<FPNode '17' (1)>
@@ -546,33 +608,62 @@ Tree:
 		<FPNode '83' (2)>
 			<FPNode '72' (2)>
 				<FPNode '89' (1)>
-				<FPNode '39' (1)>
-					<FPNode '93' (1)>
+				<FPNode '93' (1)>
+					<FPNode '39' (1)>
+						<FPNode '12' (1)>
 	<FPNode '69' (5)>
 		<FPNode '43' (1)>
 			<FPNode '72' (1)>
-				<FPNode '74' (1)>
+				<FPNode '93' (1)>
 					<FPNode '89' (1)>
-						<FPNode '93' (1)>
+						<FPNode '74' (1)>
 		<FPNode '48' (3)>
 			<FPNode '81' (1)>
 				<FPNode '43' (1)>
 					<FPNode '83' (1)>
 						<FPNode '3' (1)>
 							<FPNode '74' (1)>
-			<FPNode '3' (1)>
-				<FPNode '80' (1)>
+								<FPNode '86' (1)>
+			<FPNode '80' (1)>
+				<FPNode '3' (1)>
 					<FPNode '61' (1)>
+						<FPNode '62' (1)>
 			<FPNode '11' (1)>
-				<FPNode '35' (1)>
-					<FPNode '80' (1)>
+				<FPNode '80' (1)>
+					<FPNode '35' (1)>
+						<FPNode '86' (1)>
 		<FPNode '85' (1)>
 			<FPNode '17' (1)>
 				<FPNode '40' (1)>
 	<FPNode '3' (1)>
+	<FPNode '36' (6)>
+		<FPNode '81' (1)>
+			<FPNode '11' (1)>
+				<FPNode '28' (1)>
+					<FPNode '14' (1)>
+		<FPNode '11' (1)>
+			<FPNode '43' (1)>
+				<FPNode '28' (1)>
+					<FPNode '35' (1)>
+						<FPNode '86' (1)>
+		<FPNode '85' (1)>
+			<FPNode '35' (1)>
+				<FPNode '62' (1)>
+		<FPNode '69' (2)>
+			<FPNode '28' (1)>
+			<FPNode '81' (1)>
+				<FPNode '72' (1)>
+		<FPNode '48' (1)>
+			<FPNode '17' (1)>
+				<FPNode '11' (1)>
+					<FPNode '83' (1)>
+						<FPNode '14' (1)>
 	<FPNode '28' (2)>
-		<FPNode '89' (1)>
-			<FPNode '93' (1)>
+		<FPNode '86' (1)>
+			<FPNode '14' (1)>
+		<FPNode '93' (1)>
+			<FPNode '89' (1)>
+				<FPNode '12' (1)>
 	<FPNode '11' (1)>
 		<FPNode '3' (1)>
 			<FPNode '40' (1)>
@@ -580,9 +671,13 @@ Tree:
 		<FPNode '8' (1)>
 			<FPNode '17' (1)>
 				<FPNode '40' (1)>
-					<FPNode '74' (1)>
-						<FPNode '93' (1)>
+					<FPNode '93' (1)>
+						<FPNode '74' (1)>
+							<FPNode '86' (1)>
 	<FPNode '74' (1)>
+		<FPNode '86' (1)>
+			<FPNode '62' (1)>
+				<FPNode '12' (1)>
 
 Routes:
 	'38'
@@ -657,10 +752,14 @@ Routes:
 		-<FPNode '8' (1)>
 		-<FPNode '8' (1)>
 	'36'
+		-<FPNode '36' (4)>
+		-<FPNode '36' (1)>
+		-<FPNode '36' (6)>
+		-<FPNode '36' (6)>
+		-<FPNode '36' (1)>
+		-<FPNode '36' (1)>
 		-<FPNode '36' (5)>
-		-<FPNode '36' (7)>
-		-<FPNode '36' (7)>
-		-<FPNode '36' (8)>
+		-<FPNode '36' (3)>
 	'61'
 		-<FPNode '61' (1)>
 		-<FPNode '61' (1)>
@@ -678,15 +777,26 @@ Routes:
 		-<FPNode '61' (1)>
 		-<FPNode '61' (1)>
 		-<FPNode '61' (1)>
+	'62'
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
 	'87'
-		-<FPNode '87' (1)>
-		-<FPNode '87' (4)>
-		-<FPNode '87' (9)>
-		-<FPNode '87' (3)>
-		-<FPNode '87' (1)>
-		-<FPNode '87' (1)>
+		-<FPNode '87' (10)>
 		-<FPNode '87' (5)>
-		-<FPNode '87' (3)>
+		-<FPNode '87' (4)>
+		-<FPNode '87' (8)>
 	'85'
 		-<FPNode '85' (1)>
 		-<FPNode '85' (1)>
@@ -710,10 +820,8 @@ Routes:
 		-<FPNode '81' (4)>
 		-<FPNode '81' (1)>
 		-<FPNode '81' (1)>
+		-<FPNode '81' (3)>
 		-<FPNode '81' (2)>
-		-<FPNode '81' (1)>
-		-<FPNode '81' (1)>
-		-<FPNode '81' (1)>
 		-<FPNode '81' (1)>
 		-<FPNode '81' (1)>
 		-<FPNode '81' (1)>
@@ -727,15 +835,13 @@ Routes:
 		-<FPNode '17' (1)>
 		-<FPNode '17' (1)>
 		-<FPNode '17' (1)>
-		-<FPNode '17' (1)>
+		-<FPNode '17' (2)>
 		-<FPNode '17' (2)>
 		-<FPNode '17' (1)>
 		-<FPNode '17' (1)>
 		-<FPNode '17' (1)>
 		-<FPNode '17' (1)>
-		-<FPNode '17' (1)>
-		-<FPNode '17' (1)>
-		-<FPNode '17' (1)>
+		-<FPNode '17' (2)>
 		-<FPNode '17' (1)>
 		-<FPNode '17' (1)>
 		-<FPNode '17' (1)>
@@ -791,7 +897,8 @@ Routes:
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
@@ -866,6 +973,51 @@ Routes:
 		-<FPNode '40' (1)>
 		-<FPNode '40' (1)>
 		-<FPNode '40' (1)>
+	'14'
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+		-<FPNode '14' (1)>
+	'86'
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+		-<FPNode '86' (1)>
+	'12'
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
+		-<FPNode '12' (1)>
 	'72'
 		-<FPNode '72' (1)>
 		-<FPNode '72' (1)>
@@ -951,36 +1103,42 @@ Routes:
 		-<FPNode '28' (1)>
 		-<FPNode '28' (1)>
 
-Frequent Patterns whose appearance is >= min_support(15): 
+Frequent Patterns whose appearance is >= min_support(14): 
 	['38'] 43
 	['63'] 32
-	['36'] 27
 	['87'] 27
+	['36'] 27
 	['69'] 26
 	['48'] 24
 	['85'] 22
-	['8'] 21
 	['81'] 21
+	['8'] 21
 	['17'] 20
 	['11'] 20
 	['43'] 19
 	['28'] 19
 	['83'] 18
-	['35'] 17
 	['80'] 17
+	['35'] 17
 	['3'] 17
-	['38', '63'] 16
+	['72'] 16
 	['61'] 16
 	['40'] 16
-	['72'] 16
+	['38', '63'] 16
 	['38', '48'] 16
-	['74'] 15
-	['38', '36'] 15
-	['39'] 15
 	['93'] 15
 	['89'] 15
+	['74'] 15
+	['39'] 15
+	['38', '36'] 15
+	['86'] 14
+	['62'] 14
+	['14'] 14
+	['12'] 14
 ###########################
-Dataset 3: data.nitems_0.1.ntrans_1 w/ min_support = 100
+Spent Time:0.019076824188232422 s
+###########################
+Dataset 3: data.nitems_0.1.ntrans_1 w/ min_support = 98
 Tree:
 <FPNode (root)>
 	<FPNode '38' (373)>
@@ -1027,14 +1185,14 @@ Tree:
 							<FPNode '67' (1)>
 								<FPNode '23' (1)>
 									<FPNode '51' (1)>
-										<FPNode '73' (1)>
-											<FPNode '89' (1)>
+										<FPNode '89' (1)>
+											<FPNode '73' (1)>
 					<FPNode '85' (1)>
 						<FPNode '3' (1)>
 							<FPNode '17' (1)>
 								<FPNode '9' (1)>
-									<FPNode '40' (1)>
-										<FPNode '81' (1)>
+									<FPNode '81' (1)>
+										<FPNode '40' (1)>
 											<FPNode '72' (1)>
 												<FPNode '71' (1)>
 													<FPNode '95' (1)>
@@ -1101,8 +1259,8 @@ Tree:
 					<FPNode '35' (1)>
 				<FPNode '85' (2)>
 					<FPNode '80' (1)>
-						<FPNode '40' (1)>
-							<FPNode '81' (1)>
+						<FPNode '81' (1)>
+							<FPNode '40' (1)>
 								<FPNode '86' (1)>
 									<FPNode '23' (1)>
 										<FPNode '73' (1)>
@@ -1207,8 +1365,8 @@ Tree:
 					<FPNode '3' (1)>
 						<FPNode '14' (1)>
 							<FPNode '62' (1)>
-								<FPNode '51' (1)>
-									<FPNode '72' (1)>
+								<FPNode '72' (1)>
+									<FPNode '51' (1)>
 					<FPNode '23' (1)>
 				<FPNode '3' (1)>
 					<FPNode '47' (1)>
@@ -1255,8 +1413,8 @@ Tree:
 										<FPNode '9' (1)>
 											<FPNode '35' (1)>
 												<FPNode '93' (1)>
-					<FPNode '11' (1)>
-						<FPNode '47' (1)>
+					<FPNode '47' (1)>
+						<FPNode '11' (1)>
 							<FPNode '40' (1)>
 								<FPNode '14' (1)>
 									<FPNode '78' (1)>
@@ -1284,8 +1442,8 @@ Tree:
 										<FPNode '71' (1)>
 						<FPNode '28' (1)>
 							<FPNode '43' (1)>
-								<FPNode '40' (1)>
-									<FPNode '81' (1)>
+								<FPNode '81' (1)>
+									<FPNode '40' (1)>
 										<FPNode '67' (1)>
 											<FPNode '72' (1)>
 												<FPNode '73' (1)>
@@ -1461,13 +1619,13 @@ Tree:
 						<FPNode '48' (1)>
 							<FPNode '3' (1)>
 								<FPNode '17' (1)>
-									<FPNode '40' (1)>
-										<FPNode '81' (1)>
+									<FPNode '81' (1)>
+										<FPNode '40' (1)>
 											<FPNode '14' (1)>
 												<FPNode '86' (1)>
 													<FPNode '62' (1)>
-														<FPNode '51' (1)>
-															<FPNode '72' (1)>
+														<FPNode '72' (1)>
+															<FPNode '51' (1)>
 						<FPNode '28' (1)>
 							<FPNode '80' (1)>
 								<FPNode '14' (1)>
@@ -1481,12 +1639,13 @@ Tree:
 												<FPNode '9' (1)>
 													<FPNode '67' (1)>
 														<FPNode '7' (1)>
-					<FPNode '11' (2)>
-						<FPNode '47' (1)>
+					<FPNode '47' (1)>
+						<FPNode '11' (1)>
 							<FPNode '80' (1)>
 								<FPNode '39' (1)>
 									<FPNode '93' (1)>
 										<FPNode '73' (1)>
+					<FPNode '11' (1)>
 						<FPNode '43' (1)>
 							<FPNode '9' (1)>
 								<FPNode '23' (1)>
@@ -1519,8 +1678,8 @@ Tree:
 					<FPNode '17' (1)>
 						<FPNode '61' (1)>
 							<FPNode '67' (1)>
-								<FPNode '51' (1)>
-									<FPNode '72' (1)>
+								<FPNode '72' (1)>
+									<FPNode '51' (1)>
 										<FPNode '89' (1)>
 					<FPNode '43' (1)>
 						<FPNode '61' (1)>
@@ -1557,8 +1716,8 @@ Tree:
 					<FPNode '80' (1)>
 						<FPNode '23' (1)>
 							<FPNode '93' (1)>
-					<FPNode '11' (1)>
-						<FPNode '47' (1)>
+					<FPNode '47' (1)>
+						<FPNode '11' (1)>
 							<FPNode '80' (1)>
 								<FPNode '62' (1)>
 									<FPNode '78' (1)>
@@ -1603,8 +1762,8 @@ Tree:
 								<FPNode '73' (1)>
 									<FPNode '7' (1)>
 				<FPNode '3' (1)>
-					<FPNode '11' (1)>
-						<FPNode '47' (1)>
+					<FPNode '47' (1)>
+						<FPNode '11' (1)>
 							<FPNode '9' (1)>
 								<FPNode '72' (1)>
 									<FPNode '71' (1)>
@@ -1624,8 +1783,8 @@ Tree:
 					<FPNode '40' (1)>
 						<FPNode '86' (1)>
 							<FPNode '7' (1)>
-				<FPNode '40' (1)>
-					<FPNode '81' (1)>
+				<FPNode '81' (1)>
+					<FPNode '40' (1)>
 						<FPNode '14' (1)>
 							<FPNode '67' (1)>
 								<FPNode '78' (1)>
@@ -1680,8 +1839,8 @@ Tree:
 					<FPNode '39' (1)>
 						<FPNode '62' (1)>
 							<FPNode '67' (1)>
-								<FPNode '29' (1)>
-									<FPNode '78' (1)>
+								<FPNode '78' (1)>
+									<FPNode '29' (1)>
 										<FPNode '35' (1)>
 											<FPNode '93' (1)>
 			<FPNode '72' (1)>
@@ -1717,8 +1876,8 @@ Tree:
 						<FPNode '9' (1)>
 							<FPNode '14' (1)>
 								<FPNode '67' (1)>
-									<FPNode '51' (1)>
-										<FPNode '72' (1)>
+									<FPNode '72' (1)>
+										<FPNode '51' (1)>
 											<FPNode '73' (1)>
 				<FPNode '17' (1)>
 					<FPNode '47' (1)>
@@ -1739,13 +1898,12 @@ Tree:
 								<FPNode '67' (1)>
 									<FPNode '23' (1)>
 										<FPNode '35' (1)>
-					<FPNode '11' (1)>
-						<FPNode '47' (1)>
+					<FPNode '47' (2)>
+						<FPNode '11' (1)>
 							<FPNode '83' (1)>
 								<FPNode '80' (1)>
 									<FPNode '35' (1)>
 										<FPNode '93' (1)>
-					<FPNode '47' (1)>
 						<FPNode '23' (1)>
 							<FPNode '72' (1)>
 								<FPNode '71' (1)>
@@ -1832,8 +1990,8 @@ Tree:
 					<FPNode '35' (1)>
 						<FPNode '73' (1)>
 			<FPNode '3' (1)>
-				<FPNode '40' (1)>
-					<FPNode '81' (1)>
+				<FPNode '81' (1)>
+					<FPNode '40' (1)>
 						<FPNode '86' (1)>
 							<FPNode '23' (1)>
 			<FPNode '67' (2)>
@@ -1846,18 +2004,19 @@ Tree:
 			<FPNode '85' (5)>
 				<FPNode '62' (1)>
 					<FPNode '73' (1)>
-				<FPNode '11' (2)>
+				<FPNode '11' (1)>
 					<FPNode '39' (1)>
 						<FPNode '93' (1)>
-							<FPNode '7' (1)>
-					<FPNode '47' (1)>
-						<FPNode '39' (1)>
 							<FPNode '7' (1)>
 				<FPNode '61' (1)>
 					<FPNode '89' (1)>
 				<FPNode '3' (1)>
 					<FPNode '83' (1)>
 						<FPNode '43' (1)>
+							<FPNode '7' (1)>
+				<FPNode '47' (1)>
+					<FPNode '11' (1)>
+						<FPNode '39' (1)>
 							<FPNode '7' (1)>
 			<FPNode '28' (2)>
 				<FPNode '3' (1)>
@@ -1874,8 +2033,8 @@ Tree:
 				<FPNode '62' (1)>
 					<FPNode '67' (1)>
 						<FPNode '52' (1)>
-			<FPNode '40' (1)>
-				<FPNode '81' (1)>
+			<FPNode '81' (1)>
+				<FPNode '40' (1)>
 					<FPNode '78' (1)>
 						<FPNode '21' (1)>
 			<FPNode '3' (2)>
@@ -1908,8 +2067,8 @@ Tree:
 					<FPNode '47' (1)>
 						<FPNode '9' (1)>
 							<FPNode '62' (1)>
-								<FPNode '73' (1)>
-									<FPNode '89' (1)>
+								<FPNode '89' (1)>
+									<FPNode '73' (1)>
 										<FPNode '52' (1)>
 			<FPNode '11' (1)>
 				<FPNode '83' (1)>
@@ -1948,8 +2107,8 @@ Tree:
 				<FPNode '67' (1)>
 					<FPNode '78' (1)>
 			<FPNode '47' (2)>
-				<FPNode '51' (1)>
-					<FPNode '72' (1)>
+				<FPNode '72' (1)>
+					<FPNode '51' (1)>
 						<FPNode '93' (1)>
 							<FPNode '89' (1)>
 				<FPNode '67' (1)>
@@ -1976,19 +2135,19 @@ Tree:
 			<FPNode '62' (1)>
 				<FPNode '73' (1)>
 		<FPNode '17' (5)>
-			<FPNode '47' (1)>
+			<FPNode '47' (2)>
 				<FPNode '40' (1)>
 					<FPNode '93' (1)>
-			<FPNode '11' (2)>
-				<FPNode '47' (1)>
+				<FPNode '11' (1)>
 					<FPNode '86' (1)>
 						<FPNode '51' (1)>
 							<FPNode '93' (1)>
+			<FPNode '11' (1)>
 				<FPNode '14' (1)>
 					<FPNode '29' (1)>
 						<FPNode '23' (1)>
-							<FPNode '51' (1)>
-								<FPNode '72' (1)>
+							<FPNode '72' (1)>
+								<FPNode '51' (1)>
 			<FPNode '80' (2)>
 				<FPNode '43' (1)>
 					<FPNode '39' (1)>
@@ -2044,8 +2203,8 @@ Tree:
 									<FPNode '39' (1)>
 										<FPNode '86' (1)>
 											<FPNode '29' (1)>
-												<FPNode '51' (1)>
-													<FPNode '72' (1)>
+												<FPNode '72' (1)>
+													<FPNode '51' (1)>
 														<FPNode '52' (1)>
 					<FPNode '80' (1)>
 						<FPNode '21' (1)>
@@ -2092,18 +2251,12 @@ Tree:
 								<FPNode '73' (1)>
 					<FPNode '3' (1)>
 						<FPNode '62' (1)>
-							<FPNode '29' (1)>
-								<FPNode '78' (1)>
+							<FPNode '78' (1)>
+								<FPNode '29' (1)>
 									<FPNode '89' (1)>
-				<FPNode '11' (2)>
+				<FPNode '11' (1)>
 					<FPNode '9' (1)>
 						<FPNode '61' (1)>
-					<FPNode '47' (1)>
-						<FPNode '83' (1)>
-							<FPNode '9' (1)>
-								<FPNode '14' (1)>
-									<FPNode '29' (1)>
-										<FPNode '71' (1)>
 				<FPNode '80' (1)>
 					<FPNode '81' (1)>
 						<FPNode '86' (1)>
@@ -2124,8 +2277,8 @@ Tree:
 								<FPNode '43' (1)>
 									<FPNode '81' (1)>
 										<FPNode '67' (1)>
-											<FPNode '29' (1)>
-												<FPNode '78' (1)>
+											<FPNode '78' (1)>
+												<FPNode '29' (1)>
 													<FPNode '89' (1)>
 														<FPNode '21' (1)>
 						<FPNode '28' (1)>
@@ -2173,6 +2326,13 @@ Tree:
 								<FPNode '67' (1)>
 									<FPNode '71' (1)>
 										<FPNode '52' (1)>
+				<FPNode '47' (1)>
+					<FPNode '11' (1)>
+						<FPNode '83' (1)>
+							<FPNode '9' (1)>
+								<FPNode '14' (1)>
+									<FPNode '29' (1)>
+										<FPNode '71' (1)>
 				<FPNode '3' (2)>
 					<FPNode '17' (1)>
 						<FPNode '11' (1)>
@@ -2244,8 +2404,8 @@ Tree:
 				<FPNode '47' (2)>
 					<FPNode '80' (1)>
 						<FPNode '14' (1)>
-							<FPNode '29' (1)>
-								<FPNode '78' (1)>
+							<FPNode '78' (1)>
+								<FPNode '29' (1)>
 									<FPNode '52' (1)>
 					<FPNode '43' (1)>
 						<FPNode '9' (1)>
@@ -2280,8 +2440,8 @@ Tree:
 								<FPNode '9' (1)>
 									<FPNode '62' (1)>
 										<FPNode '29' (1)>
-											<FPNode '51' (1)>
-												<FPNode '72' (1)>
+											<FPNode '72' (1)>
+												<FPNode '51' (1)>
 													<FPNode '7' (1)>
 					<FPNode '85' (1)>
 						<FPNode '11' (1)>
@@ -2301,8 +2461,8 @@ Tree:
 					<FPNode '62' (1)>
 						<FPNode '29' (1)>
 							<FPNode '23' (1)>
-				<FPNode '29' (1)>
-					<FPNode '78' (1)>
+				<FPNode '78' (1)>
+					<FPNode '29' (1)>
 						<FPNode '51' (1)>
 				<FPNode '85' (2)>
 					<FPNode '43' (1)>
@@ -2327,8 +2487,8 @@ Tree:
 							<FPNode '39' (1)>
 								<FPNode '86' (1)>
 									<FPNode '67' (1)>
-										<FPNode '29' (1)>
-											<FPNode '78' (1)>
+										<FPNode '78' (1)>
+											<FPNode '29' (1)>
 												<FPNode '71' (1)>
 													<FPNode '35' (1)>
 				<FPNode '11' (2)>
@@ -2342,8 +2502,8 @@ Tree:
 				<FPNode '17' (1)>
 					<FPNode '47' (1)>
 						<FPNode '9' (1)>
-							<FPNode '40' (1)>
-								<FPNode '81' (1)>
+							<FPNode '81' (1)>
+								<FPNode '40' (1)>
 									<FPNode '61' (1)>
 										<FPNode '78' (1)>
 											<FPNode '23' (1)>
@@ -2363,8 +2523,8 @@ Tree:
 				<FPNode '48' (4)>
 					<FPNode '28' (1)>
 						<FPNode '17' (1)>
-							<FPNode '11' (1)>
-								<FPNode '47' (1)>
+							<FPNode '47' (1)>
+								<FPNode '11' (1)>
 									<FPNode '86' (1)>
 										<FPNode '72' (1)>
 											<FPNode '73' (1)>
@@ -2406,8 +2566,8 @@ Tree:
 				<FPNode '3' (1)>
 					<FPNode '39' (1)>
 						<FPNode '9' (1)>
-							<FPNode '29' (1)>
-								<FPNode '78' (1)>
+							<FPNode '78' (1)>
+								<FPNode '29' (1)>
 				<FPNode '9' (1)>
 					<FPNode '62' (1)>
 				<FPNode '85' (1)>
@@ -2499,8 +2659,8 @@ Tree:
 		<FPNode '36' (23)>
 			<FPNode '28' (7)>
 				<FPNode '11' (2)>
-					<FPNode '29' (1)>
-						<FPNode '78' (1)>
+					<FPNode '78' (1)>
+						<FPNode '29' (1)>
 					<FPNode '80' (1)>
 						<FPNode '67' (1)>
 							<FPNode '72' (1)>
@@ -2610,8 +2770,8 @@ Tree:
 			<FPNode '43' (1)>
 		<FPNode '47' (5)>
 			<FPNode '80' (2)>
-				<FPNode '40' (1)>
-					<FPNode '81' (1)>
+				<FPNode '81' (1)>
+					<FPNode '40' (1)>
 				<FPNode '43' (1)>
 					<FPNode '14' (1)>
 						<FPNode '67' (1)>
@@ -2668,13 +2828,13 @@ Tree:
 				<FPNode '7' (1)>
 			<FPNode '80' (1)>
 				<FPNode '40' (1)>
-					<FPNode '29' (1)>
-						<FPNode '78' (1)>
+					<FPNode '78' (1)>
+						<FPNode '29' (1)>
 			<FPNode '40' (1)>
 				<FPNode '14' (1)>
 					<FPNode '86' (1)>
-						<FPNode '29' (1)>
-							<FPNode '78' (1)>
+						<FPNode '78' (1)>
+							<FPNode '29' (1)>
 								<FPNode '23' (1)>
 									<FPNode '72' (1)>
 										<FPNode '89' (1)>
@@ -2700,14 +2860,15 @@ Tree:
 					<FPNode '61' (1)>
 						<FPNode '7' (1)>
 							<FPNode '52' (1)>
-			<FPNode '11' (3)>
+			<FPNode '11' (2)>
 				<FPNode '40' (1)>
 					<FPNode '29' (1)>
 						<FPNode '51' (1)>
 							<FPNode '73' (1)>
 				<FPNode '43' (1)>
 					<FPNode '73' (1)>
-				<FPNode '47' (1)>
+			<FPNode '47' (1)>
+				<FPNode '11' (1)>
 					<FPNode '62' (1)>
 						<FPNode '23' (1)>
 							<FPNode '72' (1)>
@@ -2732,12 +2893,13 @@ Tree:
 				<FPNode '73' (1)>
 		<FPNode '85' (7)>
 			<FPNode '17' (2)>
-				<FPNode '11' (2)>
+				<FPNode '11' (1)>
 					<FPNode '83' (1)>
 						<FPNode '9' (1)>
 							<FPNode '61' (1)>
 								<FPNode '73' (1)>
-					<FPNode '47' (1)>
+				<FPNode '47' (1)>
+					<FPNode '11' (1)>
 						<FPNode '61' (1)>
 							<FPNode '23' (1)>
 								<FPNode '73' (1)>
@@ -2813,8 +2975,8 @@ Tree:
 		<FPNode '28' (7)>
 			<FPNode '11' (1)>
 				<FPNode '61' (1)>
-					<FPNode '51' (1)>
-						<FPNode '72' (1)>
+					<FPNode '72' (1)>
+						<FPNode '51' (1)>
 							<FPNode '35' (1)>
 								<FPNode '73' (1)>
 									<FPNode '21' (1)>
@@ -2863,8 +3025,8 @@ Tree:
 			<FPNode '43' (1)>
 				<FPNode '81' (1)>
 					<FPNode '62' (1)>
-						<FPNode '51' (1)>
-							<FPNode '72' (1)>
+						<FPNode '72' (1)>
+							<FPNode '51' (1)>
 			<FPNode '71' (1)>
 				<FPNode '52' (1)>
 			<FPNode '83' (1)>
@@ -2876,9 +3038,8 @@ Tree:
 				<FPNode '83' (1)>
 					<FPNode '9' (1)>
 						<FPNode '71' (1)>
-		<FPNode '47' (1)>
-		<FPNode '11' (1)>
-			<FPNode '47' (1)>
+		<FPNode '47' (2)>
+			<FPNode '11' (1)>
 				<FPNode '40' (1)>
 					<FPNode '72' (1)>
 		<FPNode '43' (1)>
@@ -2923,10 +3084,11 @@ Tree:
 					<FPNode '17' (1)>
 						<FPNode '9' (1)>
 							<FPNode '78' (1)>
-				<FPNode '11' (2)>
+				<FPNode '11' (1)>
 					<FPNode '80' (1)>
 						<FPNode '61' (1)>
-					<FPNode '47' (1)>
+				<FPNode '47' (1)>
+					<FPNode '11' (1)>
 						<FPNode '29' (1)>
 							<FPNode '72' (1)>
 								<FPNode '95' (1)>
@@ -2939,13 +3101,14 @@ Tree:
 				<FPNode '48' (5)>
 					<FPNode '28' (2)>
 						<FPNode '23' (2)>
-					<FPNode '11' (2)>
-						<FPNode '47' (1)>
+					<FPNode '47' (1)>
+						<FPNode '11' (1)>
 							<FPNode '81' (1)>
 								<FPNode '86' (1)>
 									<FPNode '67' (1)>
 										<FPNode '35' (1)>
 											<FPNode '52' (1)>
+					<FPNode '11' (1)>
 						<FPNode '83' (1)>
 							<FPNode '80' (1)>
 								<FPNode '39' (1)>
@@ -2985,8 +3148,8 @@ Tree:
 			<FPNode '28' (5)>
 				<FPNode '17' (3)>
 					<FPNode '47' (2)>
-						<FPNode '29' (1)>
-							<FPNode '78' (1)>
+						<FPNode '78' (1)>
+							<FPNode '29' (1)>
 						<FPNode '14' (1)>
 							<FPNode '73' (1)>
 					<FPNode '14' (1)>
@@ -3002,8 +3165,8 @@ Tree:
 									<FPNode '21' (1)>
 					<FPNode '3' (1)>
 						<FPNode '61' (1)>
-							<FPNode '51' (1)>
-								<FPNode '72' (1)>
+							<FPNode '72' (1)>
+								<FPNode '51' (1)>
 									<FPNode '7' (1)>
 			<FPNode '3' (2)>
 				<FPNode '39' (1)>
@@ -3024,8 +3187,8 @@ Tree:
 							<FPNode '72' (1)>
 								<FPNode '35' (1)>
 									<FPNode '93' (1)>
-										<FPNode '73' (1)>
-											<FPNode '89' (1)>
+										<FPNode '89' (1)>
+											<FPNode '73' (1)>
 												<FPNode '52' (1)>
 				<FPNode '43' (1)>
 					<FPNode '61' (1)>
@@ -3059,8 +3222,8 @@ Tree:
 									<FPNode '35' (1)>
 										<FPNode '52' (1)>
 			<FPNode '3' (1)>
-				<FPNode '11' (1)>
-					<FPNode '47' (1)>
+				<FPNode '47' (1)>
+					<FPNode '11' (1)>
 						<FPNode '83' (1)>
 							<FPNode '14' (1)>
 								<FPNode '23' (1)>
@@ -3081,20 +3244,11 @@ Tree:
 								<FPNode '95' (1)>
 									<FPNode '21' (1)>
 		<FPNode '87' (79)>
-			<FPNode '11' (2)>
+			<FPNode '11' (1)>
 				<FPNode '83' (1)>
 					<FPNode '62' (1)>
 						<FPNode '71' (1)>
 							<FPNode '21' (1)>
-				<FPNode '47' (1)>
-					<FPNode '80' (1)>
-						<FPNode '81' (1)>
-							<FPNode '61' (1)>
-								<FPNode '62' (1)>
-									<FPNode '78' (1)>
-										<FPNode '71' (1)>
-											<FPNode '89' (1)>
-												<FPNode '52' (1)>
 			<FPNode '69' (28)>
 				<FPNode '80' (2)>
 					<FPNode '62' (1)>
@@ -3108,8 +3262,8 @@ Tree:
 					<FPNode '11' (1)>
 						<FPNode '43' (1)>
 							<FPNode '81' (1)>
-								<FPNode '51' (1)>
-									<FPNode '72' (1)>
+								<FPNode '72' (1)>
+									<FPNode '51' (1)>
 										<FPNode '52' (1)>
 					<FPNode '14' (1)>
 						<FPNode '72' (1)>
@@ -3204,8 +3358,8 @@ Tree:
 								<FPNode '39' (1)>
 									<FPNode '9' (1)>
 										<FPNode '14' (1)>
-											<FPNode '29' (1)>
-												<FPNode '78' (1)>
+											<FPNode '78' (1)>
+												<FPNode '29' (1)>
 					<FPNode '86' (1)>
 						<FPNode '35' (1)>
 				<FPNode '3' (1)>
@@ -3220,8 +3374,8 @@ Tree:
 								<FPNode '23' (1)>
 				<FPNode '61' (1)>
 					<FPNode '23' (1)>
-						<FPNode '51' (1)>
-							<FPNode '72' (1)>
+						<FPNode '72' (1)>
+							<FPNode '51' (1)>
 				<FPNode '40' (1)>
 					<FPNode '35' (1)>
 						<FPNode '95' (1)>
@@ -3292,24 +3446,24 @@ Tree:
 										<FPNode '21' (1)>
 				<FPNode '85' (2)>
 					<FPNode '3' (2)>
-						<FPNode '40' (1)>
-							<FPNode '81' (1)>
+						<FPNode '81' (1)>
+							<FPNode '40' (1)>
 								<FPNode '14' (1)>
 						<FPNode '17' (1)>
-							<FPNode '11' (1)>
-								<FPNode '47' (1)>
+							<FPNode '47' (1)>
+								<FPNode '11' (1)>
 									<FPNode '83' (1)>
 										<FPNode '9' (1)>
 											<FPNode '62' (1)>
-												<FPNode '29' (1)>
-													<FPNode '78' (1)>
+												<FPNode '78' (1)>
+													<FPNode '29' (1)>
 														<FPNode '72' (1)>
 															<FPNode '95' (1)>
 				<FPNode '8' (1)>
 					<FPNode '40' (1)>
 						<FPNode '62' (1)>
-							<FPNode '29' (1)>
-								<FPNode '78' (1)>
+							<FPNode '78' (1)>
+								<FPNode '29' (1)>
 									<FPNode '35' (1)>
 				<FPNode '17' (1)>
 					<FPNode '81' (1)>
@@ -3333,8 +3487,8 @@ Tree:
 											<FPNode '35' (1)>
 				<FPNode '85' (1)>
 					<FPNode '35' (1)>
-						<FPNode '73' (1)>
-							<FPNode '89' (1)>
+						<FPNode '89' (1)>
+							<FPNode '73' (1)>
 				<FPNode '14' (1)>
 					<FPNode '78' (1)>
 						<FPNode '71' (1)>
@@ -3346,8 +3500,8 @@ Tree:
 				<FPNode '3' (2)>
 					<FPNode '80' (1)>
 						<FPNode '40' (1)>
-							<FPNode '29' (1)>
-								<FPNode '78' (1)>
+							<FPNode '78' (1)>
+								<FPNode '29' (1)>
 									<FPNode '52' (1)>
 				<FPNode '48' (2)>
 					<FPNode '11' (1)>
@@ -3374,8 +3528,8 @@ Tree:
 									<FPNode '73' (1)>
 										<FPNode '52' (1)>
 											<FPNode '21' (1)>
-					<FPNode '11' (1)>
-						<FPNode '47' (1)>
+					<FPNode '47' (1)>
+						<FPNode '11' (1)>
 							<FPNode '9' (1)>
 								<FPNode '78' (1)>
 									<FPNode '71' (1)>
@@ -3386,13 +3540,13 @@ Tree:
 				<FPNode '11' (1)>
 					<FPNode '51' (1)>
 						<FPNode '35' (1)>
-							<FPNode '73' (1)>
-								<FPNode '89' (1)>
+							<FPNode '89' (1)>
+								<FPNode '73' (1)>
 									<FPNode '7' (1)>
 			<FPNode '28' (3)>
 				<FPNode '40' (1)>
-					<FPNode '51' (1)>
-						<FPNode '72' (1)>
+					<FPNode '72' (1)>
+						<FPNode '51' (1)>
 							<FPNode '71' (1)>
 				<FPNode '29' (1)>
 				<FPNode '9' (1)>
@@ -3400,19 +3554,18 @@ Tree:
 			<FPNode '3' (4)>
 				<FPNode '52' (1)>
 					<FPNode '21' (1)>
-				<FPNode '47' (1)>
+				<FPNode '47' (2)>
 					<FPNode '86' (1)>
 						<FPNode '67' (1)>
 							<FPNode '72' (1)>
 								<FPNode '35' (1)>
 									<FPNode '7' (1)>
-				<FPNode '11' (1)>
-					<FPNode '47' (1)>
+					<FPNode '11' (1)>
 						<FPNode '81' (1)>
 							<FPNode '62' (1)>
 								<FPNode '72' (1)>
 									<FPNode '71' (1)>
-			<FPNode '47' (5)>
+			<FPNode '47' (6)>
 				<FPNode '80' (1)>
 					<FPNode '14' (1)>
 						<FPNode '73' (1)>
@@ -3430,6 +3583,15 @@ Tree:
 					<FPNode '61' (1)>
 						<FPNode '62' (1)>
 							<FPNode '7' (1)>
+				<FPNode '11' (1)>
+					<FPNode '80' (1)>
+						<FPNode '81' (1)>
+							<FPNode '61' (1)>
+								<FPNode '62' (1)>
+									<FPNode '78' (1)>
+										<FPNode '71' (1)>
+											<FPNode '89' (1)>
+												<FPNode '52' (1)>
 			<FPNode '78' (1)>
 				<FPNode '72' (1)>
 					<FPNode '35' (1)>
@@ -3467,8 +3629,8 @@ Tree:
 				<FPNode '40' (1)>
 					<FPNode '89' (1)>
 						<FPNode '21' (1)>
-				<FPNode '73' (1)>
-					<FPNode '89' (1)>
+				<FPNode '89' (1)>
+					<FPNode '73' (1)>
 				<FPNode '3' (1)>
 					<FPNode '14' (1)>
 						<FPNode '67' (1)>
@@ -3569,8 +3731,8 @@ Tree:
 				<FPNode '9' (1)>
 					<FPNode '72' (1)>
 			<FPNode '83' (1)>
-				<FPNode '40' (1)>
-					<FPNode '81' (1)>
+				<FPNode '81' (1)>
+					<FPNode '40' (1)>
 						<FPNode '78' (1)>
 							<FPNode '93' (1)>
 								<FPNode '21' (1)>
@@ -3618,8 +3780,8 @@ Tree:
 							<FPNode '86' (1)>
 								<FPNode '72' (1)>
 				<FPNode '85' (2)>
-					<FPNode '11' (1)>
-						<FPNode '47' (1)>
+					<FPNode '47' (1)>
+						<FPNode '11' (1)>
 							<FPNode '67' (1)>
 								<FPNode '89' (1)>
 									<FPNode '7' (1)>
@@ -3630,8 +3792,8 @@ Tree:
 									<FPNode '72' (1)>
 				<FPNode '48' (3)>
 					<FPNode '3' (2)>
-						<FPNode '29' (1)>
-							<FPNode '78' (1)>
+						<FPNode '78' (1)>
+							<FPNode '29' (1)>
 								<FPNode '89' (1)>
 						<FPNode '11' (1)>
 							<FPNode '83' (1)>
@@ -3664,8 +3826,8 @@ Tree:
 													<FPNode '52' (1)>
 					<FPNode '47' (1)>
 						<FPNode '43' (1)>
-							<FPNode '29' (1)>
-								<FPNode '78' (1)>
+							<FPNode '78' (1)>
+								<FPNode '29' (1)>
 									<FPNode '51' (1)>
 										<FPNode '89' (1)>
 					<FPNode '17' (1)>
@@ -3703,8 +3865,8 @@ Tree:
 											<FPNode '95' (1)>
 						<FPNode '80' (1)>
 							<FPNode '39' (1)>
-								<FPNode '40' (1)>
-									<FPNode '81' (1)>
+								<FPNode '81' (1)>
+									<FPNode '40' (1)>
 										<FPNode '61' (1)>
 											<FPNode '67' (1)>
 												<FPNode '71' (1)>
@@ -3776,10 +3938,9 @@ Tree:
 							<FPNode '67' (1)>
 								<FPNode '29' (1)>
 			<FPNode '52' (1)>
-			<FPNode '11' (1)>
-				<FPNode '47' (1)>
+			<FPNode '47' (2)>
+				<FPNode '11' (1)>
 					<FPNode '9' (1)>
-			<FPNode '47' (1)>
 				<FPNode '43' (1)>
 			<FPNode '80' (1)>
 				<FPNode '43' (1)>
@@ -3813,28 +3974,34 @@ Tree:
 					<FPNode '67' (1)>
 						<FPNode '89' (1)>
 		<FPNode '48' (10)>
-			<FPNode '47' (2)>
+			<FPNode '47' (3)>
 				<FPNode '86' (1)>
 					<FPNode '67' (1)>
 						<FPNode '51' (1)>
+				<FPNode '11' (1)>
+					<FPNode '43' (1)>
+						<FPNode '61' (1)>
+							<FPNode '73' (1)>
+								<FPNode '95' (1)>
 				<FPNode '61' (1)>
 					<FPNode '62' (1)>
 						<FPNode '51' (1)>
 			<FPNode '85' (3)>
-				<FPNode '11' (2)>
-					<FPNode '47' (1)>
+				<FPNode '47' (1)>
+					<FPNode '11' (1)>
 						<FPNode '80' (1)>
 							<FPNode '29' (1)>
 								<FPNode '72' (1)>
+				<FPNode '39' (1)>
+					<FPNode '62' (1)>
+						<FPNode '71' (1)>
+							<FPNode '73' (1)>
+				<FPNode '11' (1)>
 					<FPNode '80' (1)>
 						<FPNode '9' (1)>
 							<FPNode '61' (1)>
 								<FPNode '51' (1)>
 									<FPNode '71' (1)>
-				<FPNode '39' (1)>
-					<FPNode '62' (1)>
-						<FPNode '71' (1)>
-							<FPNode '73' (1)>
 			<FPNode '39' (1)>
 				<FPNode '52' (1)>
 			<FPNode '67' (1)>
@@ -3845,12 +4012,6 @@ Tree:
 						<FPNode '61' (1)>
 							<FPNode '62' (1)>
 								<FPNode '73' (1)>
-			<FPNode '11' (1)>
-				<FPNode '47' (1)>
-					<FPNode '43' (1)>
-						<FPNode '61' (1)>
-							<FPNode '73' (1)>
-								<FPNode '95' (1)>
 			<FPNode '28' (1)>
 				<FPNode '11' (1)>
 					<FPNode '14' (1)>
@@ -3913,8 +4074,8 @@ Tree:
 				<FPNode '28' (2)>
 					<FPNode '3' (2)>
 						<FPNode '9' (1)>
-							<FPNode '40' (1)>
-								<FPNode '81' (1)>
+							<FPNode '81' (1)>
+								<FPNode '40' (1)>
 									<FPNode '14' (1)>
 										<FPNode '29' (1)>
 											<FPNode '73' (1)>
@@ -3926,8 +4087,8 @@ Tree:
 				<FPNode '3' (1)>
 					<FPNode '11' (1)>
 						<FPNode '39' (1)>
-							<FPNode '29' (1)>
-								<FPNode '78' (1)>
+							<FPNode '78' (1)>
+								<FPNode '29' (1)>
 									<FPNode '23' (1)>
 										<FPNode '72' (1)>
 											<FPNode '52' (1)>
@@ -4067,8 +4228,8 @@ Tree:
 										<FPNode '89' (1)>
 				<FPNode '48' (1)>
 					<FPNode '86' (1)>
-						<FPNode '29' (1)>
-							<FPNode '78' (1)>
+						<FPNode '78' (1)>
+							<FPNode '29' (1)>
 								<FPNode '35' (1)>
 									<FPNode '93' (1)>
 				<FPNode '83' (1)>
@@ -4184,8 +4345,8 @@ Tree:
 				<FPNode '17' (1)>
 					<FPNode '43' (1)>
 						<FPNode '86' (1)>
-							<FPNode '73' (1)>
-								<FPNode '89' (1)>
+							<FPNode '89' (1)>
+								<FPNode '73' (1)>
 									<FPNode '95' (1)>
 										<FPNode '21' (1)>
 				<FPNode '11' (1)>
@@ -4193,8 +4354,8 @@ Tree:
 						<FPNode '80' (1)>
 							<FPNode '43' (1)>
 								<FPNode '39' (1)>
-									<FPNode '29' (1)>
-										<FPNode '78' (1)>
+									<FPNode '78' (1)>
+										<FPNode '29' (1)>
 											<FPNode '23' (1)>
 												<FPNode '93' (1)>
 													<FPNode '89' (1)>
@@ -4206,15 +4367,15 @@ Tree:
 			<FPNode '61' (1)>
 				<FPNode '67' (1)>
 					<FPNode '23' (1)>
-						<FPNode '51' (1)>
-							<FPNode '72' (1)>
+						<FPNode '72' (1)>
+							<FPNode '51' (1)>
 								<FPNode '35' (1)>
 		<FPNode '8' (14)>
 			<FPNode '85' (1)>
 				<FPNode '3' (1)>
 					<FPNode '17' (1)>
-						<FPNode '11' (1)>
-							<FPNode '47' (1)>
+						<FPNode '47' (1)>
+							<FPNode '11' (1)>
 								<FPNode '80' (1)>
 									<FPNode '9' (1)>
 										<FPNode '72' (1)>
@@ -4227,16 +4388,16 @@ Tree:
 						<FPNode '39' (1)>
 							<FPNode '40' (1)>
 				<FPNode '17' (1)>
-					<FPNode '40' (1)>
-						<FPNode '81' (1)>
+					<FPNode '81' (1)>
+						<FPNode '40' (1)>
 							<FPNode '21' (1)>
 			<FPNode '80' (2)>
 				<FPNode '67' (1)>
 					<FPNode '29' (1)>
 						<FPNode '7' (1)>
 				<FPNode '39' (1)>
-					<FPNode '40' (1)>
-						<FPNode '81' (1)>
+					<FPNode '81' (1)>
+						<FPNode '40' (1)>
 							<FPNode '67' (1)>
 								<FPNode '78' (1)>
 									<FPNode '93' (1)>
@@ -4323,8 +4484,8 @@ Tree:
 			<FPNode '17' (1)>
 			<FPNode '47' (2)>
 				<FPNode '43' (1)>
-					<FPNode '40' (1)>
-						<FPNode '81' (1)>
+					<FPNode '81' (1)>
+						<FPNode '40' (1)>
 							<FPNode '73' (1)>
 								<FPNode '52' (1)>
 				<FPNode '9' (1)>
@@ -4346,8 +4507,8 @@ Tree:
 			<FPNode '23' (1)>
 				<FPNode '71' (1)>
 					<FPNode '52' (1)>
-			<FPNode '40' (1)>
-				<FPNode '81' (1)>
+			<FPNode '81' (1)>
+				<FPNode '40' (1)>
 		<FPNode '40' (1)>
 			<FPNode '72' (1)>
 		<FPNode '17' (3)>
@@ -4380,8 +4541,8 @@ Tree:
 			<FPNode '85' (2)>
 				<FPNode '35' (1)>
 					<FPNode '7' (1)>
-				<FPNode '11' (1)>
-					<FPNode '47' (1)>
+				<FPNode '47' (1)>
+					<FPNode '11' (1)>
 						<FPNode '80' (1)>
 							<FPNode '9' (1)>
 								<FPNode '86' (1)>
@@ -4398,8 +4559,8 @@ Tree:
 				<FPNode '9' (1)>
 					<FPNode '78' (1)>
 		<FPNode '39' (1)>
-			<FPNode '40' (1)>
-				<FPNode '81' (1)>
+			<FPNode '81' (1)>
+				<FPNode '40' (1)>
 					<FPNode '61' (1)>
 						<FPNode '23' (1)>
 							<FPNode '52' (1)>
@@ -4417,14 +4578,14 @@ Tree:
 			<FPNode '9' (3)>
 				<FPNode '14' (1)>
 					<FPNode '61' (1)>
-						<FPNode '29' (1)>
-							<FPNode '78' (1)>
+						<FPNode '78' (1)>
+							<FPNode '29' (1)>
 								<FPNode '93' (1)>
 									<FPNode '52' (1)>
 				<FPNode '23' (1)>
 					<FPNode '51' (1)>
-						<FPNode '73' (1)>
-							<FPNode '89' (1)>
+						<FPNode '89' (1)>
+							<FPNode '73' (1)>
 				<FPNode '62' (1)>
 					<FPNode '71' (1)>
 						<FPNode '35' (1)>
@@ -4441,30 +4602,32 @@ Tree:
 	<FPNode '72' (2)>
 		<FPNode '95' (1)>
 	<FPNode '3' (19)>
-		<FPNode '11' (3)>
+		<FPNode '11' (2)>
 			<FPNode '80' (1)>
 				<FPNode '81' (1)>
 					<FPNode '14' (1)>
 						<FPNode '61' (1)>
 							<FPNode '89' (1)>
 								<FPNode '21' (1)>
-			<FPNode '47' (1)>
-				<FPNode '40' (1)>
-					<FPNode '29' (1)>
-						<FPNode '23' (1)>
-							<FPNode '73' (1)>
 			<FPNode '40' (1)>
 				<FPNode '51' (1)>
 					<FPNode '73' (1)>
 		<FPNode '9' (2)>
-			<FPNode '29' (1)>
-				<FPNode '78' (1)>
+			<FPNode '78' (1)>
+				<FPNode '29' (1)>
 					<FPNode '95' (1)>
 			<FPNode '81' (1)>
 				<FPNode '86' (1)>
-					<FPNode '29' (1)>
-						<FPNode '78' (1)>
+					<FPNode '78' (1)>
+						<FPNode '29' (1)>
 							<FPNode '95' (1)>
+		<FPNode '47' (2)>
+			<FPNode '11' (1)>
+				<FPNode '40' (1)>
+					<FPNode '29' (1)>
+						<FPNode '23' (1)>
+							<FPNode '73' (1)>
+			<FPNode '67' (1)>
 		<FPNode '67' (1)>
 			<FPNode '23' (1)>
 				<FPNode '93' (1)>
@@ -4475,8 +4638,8 @@ Tree:
 					<FPNode '51' (1)>
 						<FPNode '71' (1)>
 							<FPNode '93' (1)>
-								<FPNode '73' (1)>
-									<FPNode '89' (1)>
+								<FPNode '89' (1)>
+									<FPNode '73' (1)>
 										<FPNode '21' (1)>
 			<FPNode '14' (1)>
 				<FPNode '67' (1)>
@@ -4504,8 +4667,6 @@ Tree:
 		<FPNode '43' (1)>
 			<FPNode '62' (1)>
 				<FPNode '71' (1)>
-		<FPNode '47' (1)>
-			<FPNode '67' (1)>
 	<FPNode '40' (3)>
 		<FPNode '14' (2)>
 			<FPNode '29' (1)>
@@ -4536,16 +4697,16 @@ Tree:
 		<FPNode '83' (5)>
 			<FPNode '29' (2)>
 				<FPNode '23' (1)>
-					<FPNode '51' (1)>
-						<FPNode '72' (1)>
+					<FPNode '72' (1)>
+						<FPNode '51' (1)>
 							<FPNode '89' (1)>
 								<FPNode '95' (1)>
 				<FPNode '51' (1)>
 					<FPNode '89' (1)>
 						<FPNode '95' (1)>
 			<FPNode '39' (1)>
-				<FPNode '51' (1)>
-					<FPNode '72' (1)>
+				<FPNode '72' (1)>
+					<FPNode '51' (1)>
 						<FPNode '93' (1)>
 			<FPNode '43' (1)>
 				<FPNode '51' (1)>
@@ -4572,8 +4733,8 @@ Tree:
 					<FPNode '72' (1)>
 			<FPNode '9' (1)>
 				<FPNode '14' (1)>
-					<FPNode '73' (1)>
-						<FPNode '89' (1)>
+					<FPNode '89' (1)>
+						<FPNode '73' (1)>
 							<FPNode '52' (1)>
 		<FPNode '11' (1)>
 			<FPNode '78' (1)>
@@ -4588,8 +4749,8 @@ Tree:
 				<FPNode '35' (1)>
 			<FPNode '14' (1)>
 				<FPNode '61' (1)>
-					<FPNode '29' (1)>
-						<FPNode '78' (1)>
+					<FPNode '78' (1)>
+						<FPNode '29' (1)>
 							<FPNode '89' (1)>
 								<FPNode '95' (1)>
 									<FPNode '21' (1)>
@@ -4609,22 +4770,22 @@ Tree:
 				<FPNode '17' (1)>
 					<FPNode '83' (1)>
 						<FPNode '7' (1)>
-			<FPNode '11' (2)>
-				<FPNode '47' (1)>
+			<FPNode '47' (1)>
+				<FPNode '11' (1)>
 					<FPNode '80' (1)>
 						<FPNode '86' (1)>
 							<FPNode '29' (1)>
 								<FPNode '35' (1)>
 									<FPNode '7' (1)>
-				<FPNode '52' (1)>
 			<FPNode '40' (1)>
 				<FPNode '89' (1)>
 					<FPNode '7' (1)>
 			<FPNode '17' (2)>
-				<FPNode '11' (2)>
+				<FPNode '11' (1)>
 					<FPNode '62' (1)>
 						<FPNode '73' (1)>
-					<FPNode '47' (1)>
+				<FPNode '47' (1)>
+					<FPNode '11' (1)>
 						<FPNode '40' (1)>
 			<FPNode '39' (2)>
 				<FPNode '14' (1)>
@@ -4644,12 +4805,14 @@ Tree:
 								<FPNode '67' (1)>
 									<FPNode '78' (1)>
 										<FPNode '35' (1)>
+			<FPNode '11' (1)>
+				<FPNode '52' (1)>
 			<FPNode '81' (2)>
 				<FPNode '23' (1)>
 					<FPNode '89' (1)>
 				<FPNode '62' (1)>
-					<FPNode '51' (1)>
-						<FPNode '72' (1)>
+					<FPNode '72' (1)>
+						<FPNode '51' (1)>
 			<FPNode '28' (2)>
 				<FPNode '85' (1)>
 					<FPNode '39' (1)>
@@ -4777,8 +4940,8 @@ Tree:
 			<FPNode '47' (1)>
 				<FPNode '80' (1)>
 					<FPNode '62' (1)>
-						<FPNode '29' (1)>
-							<FPNode '78' (1)>
+						<FPNode '78' (1)>
+							<FPNode '29' (1)>
 								<FPNode '89' (1)>
 			<FPNode '78' (1)>
 			<FPNode '11' (1)>
@@ -4811,15 +4974,15 @@ Tree:
 			<FPNode '48' (8)>
 				<FPNode '11' (1)>
 					<FPNode '80' (1)>
-						<FPNode '29' (1)>
-							<FPNode '78' (1)>
+						<FPNode '78' (1)>
+							<FPNode '29' (1)>
 								<FPNode '23' (1)>
 				<FPNode '3' (1)>
 					<FPNode '17' (1)>
 						<FPNode '9' (1)>
 							<FPNode '61' (1)>
-								<FPNode '51' (1)>
-									<FPNode '72' (1)>
+								<FPNode '72' (1)>
+									<FPNode '51' (1)>
 				<FPNode '23' (1)>
 				<FPNode '28' (1)>
 					<FPNode '85' (1)>
@@ -4900,8 +5063,8 @@ Tree:
 		<FPNode '17' (3)>
 			<FPNode '14' (2)>
 				<FPNode '23' (1)>
-					<FPNode '51' (1)>
-						<FPNode '72' (1)>
+					<FPNode '72' (1)>
+						<FPNode '51' (1)>
 				<FPNode '67' (1)>
 			<FPNode '11' (1)>
 				<FPNode '80' (1)>
@@ -4919,8 +5082,8 @@ Tree:
 					<FPNode '9' (1)>
 						<FPNode '14' (1)>
 							<FPNode '67' (1)>
-								<FPNode '29' (1)>
-									<FPNode '78' (1)>
+								<FPNode '78' (1)>
+									<FPNode '29' (1)>
 										<FPNode '21' (1)>
 		<FPNode '61' (1)>
 			<FPNode '86' (1)>
@@ -4968,8 +5131,8 @@ Tree:
 				<FPNode '17' (1)>
 					<FPNode '47' (1)>
 						<FPNode '9' (1)>
-							<FPNode '40' (1)>
-								<FPNode '81' (1)>
+							<FPNode '81' (1)>
+								<FPNode '40' (1)>
 									<FPNode '14' (1)>
 										<FPNode '86' (1)>
 											<FPNode '29' (1)>
@@ -4980,8 +5143,8 @@ Tree:
 					<FPNode '81' (1)>
 					<FPNode '9' (1)>
 						<FPNode '61' (1)>
-							<FPNode '29' (1)>
-								<FPNode '78' (1)>
+							<FPNode '78' (1)>
+								<FPNode '29' (1)>
 									<FPNode '93' (1)>
 		<FPNode '85' (5)>
 			<FPNode '62' (1)>
@@ -5022,14 +5185,14 @@ Tree:
 										<FPNode '21' (1)>
 			<FPNode '78' (1)>
 				<FPNode '93' (1)>
-			<FPNode '11' (1)>
-				<FPNode '47' (1)>
+			<FPNode '47' (1)>
+				<FPNode '11' (1)>
 					<FPNode '29' (1)>
 						<FPNode '23' (1)>
 							<FPNode '95' (1)>
 			<FPNode '85' (1)>
-				<FPNode '40' (1)>
-					<FPNode '81' (1)>
+				<FPNode '81' (1)>
+					<FPNode '40' (1)>
 						<FPNode '78' (1)>
 							<FPNode '89' (1)>
 		<FPNode '8' (7)>
@@ -5067,8 +5230,8 @@ Tree:
 				<FPNode '47' (1)>
 					<FPNode '80' (1)>
 						<FPNode '40' (1)>
-							<FPNode '29' (1)>
-								<FPNode '78' (1)>
+							<FPNode '78' (1)>
+								<FPNode '29' (1)>
 									<FPNode '52' (1)>
 			<FPNode '85' (1)>
 				<FPNode '80' (1)>
@@ -5105,8 +5268,8 @@ Tree:
 			<FPNode '83' (1)>
 				<FPNode '14' (1)>
 					<FPNode '23' (1)>
-						<FPNode '51' (1)>
-							<FPNode '72' (1)>
+						<FPNode '72' (1)>
+							<FPNode '51' (1)>
 								<FPNode '93' (1)>
 									<FPNode '89' (1)>
 			<FPNode '43' (1)>
@@ -5167,8 +5330,8 @@ Tree:
 			<FPNode '83' (1)>
 			<FPNode '86' (1)>
 				<FPNode '62' (1)>
-					<FPNode '51' (1)>
-						<FPNode '72' (1)>
+					<FPNode '72' (1)>
+						<FPNode '51' (1)>
 							<FPNode '21' (1)>
 			<FPNode '47' (1)>
 				<FPNode '83' (1)>
@@ -5178,15 +5341,15 @@ Tree:
 				<FPNode '67' (1)>
 					<FPNode '73' (1)>
 						<FPNode '21' (1)>
-			<FPNode '29' (1)>
-				<FPNode '78' (1)>
+			<FPNode '78' (1)>
+				<FPNode '29' (1)>
 					<FPNode '23' (1)>
-		<FPNode '11' (1)>
-			<FPNode '47' (1)>
+		<FPNode '47' (1)>
+			<FPNode '11' (1)>
 				<FPNode '80' (1)>
 					<FPNode '39' (1)>
-						<FPNode '40' (1)>
-							<FPNode '81' (1)>
+						<FPNode '81' (1)>
+							<FPNode '40' (1)>
 								<FPNode '23' (1)>
 									<FPNode '95' (1)>
 		<FPNode '85' (1)>
@@ -5199,16 +5362,12 @@ Tree:
 									<FPNode '7' (1)>
 	<FPNode '81' (1)>
 		<FPNode '61' (1)>
-	<FPNode '11' (3)>
-		<FPNode '40' (1)>
-			<FPNode '81' (1)>
+	<FPNode '11' (2)>
+		<FPNode '81' (1)>
+			<FPNode '40' (1)>
 				<FPNode '67' (1)>
 					<FPNode '7' (1)>
 						<FPNode '95' (1)>
-		<FPNode '47' (1)>
-			<FPNode '83' (1)>
-				<FPNode '89' (1)>
-					<FPNode '52' (1)>
 		<FPNode '80' (1)>
 			<FPNode '39' (1)>
 				<FPNode '81' (1)>
@@ -5239,8 +5398,8 @@ Tree:
 				<FPNode '7' (1)>
 			<FPNode '83' (1)>
 				<FPNode '39' (1)>
-			<FPNode '11' (1)>
-				<FPNode '47' (1)>
+			<FPNode '47' (1)>
+				<FPNode '11' (1)>
 					<FPNode '43' (1)>
 						<FPNode '86' (1)>
 		<FPNode '3' (1)>
@@ -5270,10 +5429,9 @@ Tree:
 					<FPNode '89' (1)>
 						<FPNode '7' (1)>
 		<FPNode '85' (2)>
-			<FPNode '47' (1)>
+			<FPNode '47' (2)>
 				<FPNode '7' (1)>
-			<FPNode '11' (1)>
-				<FPNode '47' (1)>
+				<FPNode '11' (1)>
 					<FPNode '81' (1)>
 						<FPNode '14' (1)>
 							<FPNode '61' (1)>
@@ -5301,8 +5459,8 @@ Tree:
 			<FPNode '93' (1)>
 				<FPNode '95' (1)>
 	<FPNode '83' (1)>
-		<FPNode '40' (1)>
-			<FPNode '81' (1)>
+		<FPNode '81' (1)>
+			<FPNode '40' (1)>
 				<FPNode '62' (1)>
 					<FPNode '78' (1)>
 						<FPNode '72' (1)>
@@ -5312,15 +5470,13 @@ Tree:
 				<FPNode '7' (1)>
 					<FPNode '52' (1)>
 		<FPNode '40' (1)>
-		<FPNode '11' (2)>
-			<FPNode '47' (1)>
+		<FPNode '47' (1)>
+			<FPNode '11' (1)>
 				<FPNode '43' (1)>
 					<FPNode '14' (1)>
 						<FPNode '61' (1)>
 							<FPNode '29' (1)>
 								<FPNode '93' (1)>
-			<FPNode '40' (1)>
-				<FPNode '89' (1)>
 		<FPNode '43' (1)>
 			<FPNode '40' (1)>
 				<FPNode '78' (1)>
@@ -5330,6 +5486,9 @@ Tree:
 			<FPNode '23' (1)>
 				<FPNode '52' (1)>
 					<FPNode '95' (1)>
+		<FPNode '11' (1)>
+			<FPNode '40' (1)>
+				<FPNode '89' (1)>
 		<FPNode '39' (1)>
 			<FPNode '14' (1)>
 				<FPNode '23' (1)>
@@ -5344,7 +5503,11 @@ Tree:
 			<FPNode '95' (1)>
 		<FPNode '14' (1)>
 			<FPNode '89' (1)>
-	<FPNode '47' (2)>
+	<FPNode '47' (3)>
+		<FPNode '11' (1)>
+			<FPNode '83' (1)>
+				<FPNode '89' (1)>
+					<FPNode '52' (1)>
 		<FPNode '71' (1)>
 	<FPNode '39' (2)>
 		<FPNode '9' (1)>
@@ -5379,9 +5542,9 @@ Routes:
 	'47'
 		-<FPNode '47' (2)>
 		-<FPNode '47' (1)>
+		-<FPNode '47' (2)>
 		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
+		-<FPNode '47' (2)>
 		-<FPNode '47' (3)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
@@ -5406,28 +5569,16 @@ Routes:
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
-		-<FPNode '47' (2)>
-		-<FPNode '47' (5)>
+		-<FPNode '47' (3)>
+		-<FPNode '47' (6)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (3)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
+		-<FPNode '47' (3)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (2)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (2)>
-		-<FPNode '47' (2)>
-		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
@@ -5436,7 +5587,16 @@ Routes:
 		-<FPNode '47' (1)>
 		-<FPNode '47' (2)>
 		-<FPNode '47' (2)>
+		-<FPNode '47' (2)>
+		-<FPNode '47' (2)>
 		-<FPNode '47' (1)>
+		-<FPNode '47' (2)>
+		-<FPNode '47' (1)>
+		-<FPNode '47' (1)>
+		-<FPNode '47' (1)>
+		-<FPNode '47' (1)>
+		-<FPNode '47' (1)>
+		-<FPNode '47' (2)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
@@ -5455,15 +5615,14 @@ Routes:
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
+		-<FPNode '47' (2)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (2)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
+		-<FPNode '47' (2)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
@@ -5495,13 +5654,7 @@ Routes:
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
 		-<FPNode '47' (2)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
-		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
 		-<FPNode '47' (1)>
@@ -7612,12 +7765,13 @@ Routes:
 		-<FPNode '11' (2)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (2)>
+		-<FPNode '11' (1)>
 		-<FPNode '11' (2)>
-		-<FPNode '11' (3)>
 		-<FPNode '11' (2)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
-		-<FPNode '11' (3)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (2)>
 		-<FPNode '11' (2)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
@@ -7625,24 +7779,25 @@ Routes:
 		-<FPNode '11' (2)>
 		-<FPNode '11' (8)>
 		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
 		-<FPNode '11' (3)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
@@ -7653,13 +7808,6 @@ Routes:
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (3)>
-		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
@@ -7669,27 +7817,6 @@ Routes:
 		-<FPNode '11' (1)>
 		-<FPNode '11' (2)>
 		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (1)>
-		-<FPNode '11' (2)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
@@ -7708,15 +7835,56 @@ Routes:
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (2)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
 		-<FPNode '11' (2)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
 		-<FPNode '11' (2)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (2)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (2)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
+		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
 		-<FPNode '11' (1)>
@@ -9779,7 +9947,7 @@ Routes:
 		-<FPNode '28' (1)>
 		-<FPNode '28' (1)>
 
-Frequent Patterns whose appearance is >= min_support(100): 
+Frequent Patterns whose appearance is >= min_support(98): 
 	['38'] 373
 	['63'] 358
 	['87'] 348
@@ -9797,8 +9965,8 @@ Frequent Patterns whose appearance is >= min_support(100):
 	['80'] 166
 	['43'] 162
 	['39'] 157
-	['81'] 155
 	['9'] 155
+	['81'] 155
 	['40'] 155
 	['14'] 154
 	['61'] 153
@@ -9810,14 +9978,14 @@ Frequent Patterns whose appearance is >= min_support(100):
 	['29'] 142
 	['38', '63'] 140
 	['23'] 138
-	['51'] 136
 	['72'] 136
+	['51'] 136
 	['63', '87'] 134
 	['71'] 133
 	['35'] 132
 	['93'] 129
-	['73'] 128
 	['89'] 128
+	['73'] 128
 	['63', '69'] 116
 	['7'] 113
 	['38', '69'] 111
@@ -9829,145 +9997,309 @@ Frequent Patterns whose appearance is >= min_support(100):
 	['87', '36'] 102
 	['87', '69'] 101
 ###########################
-Dataset 4: data.nitems_1.ntrans_0.1 w/ min_support = 5
+Spent Time:0.2728550434112549 s
+###########################
+Dataset 4: data.nitems_1.ntrans_0.1 w/ min_support = 4
 Tree:
 <FPNode (root)>
-	<FPNode '772' (2)>
-		<FPNode '790' (1)>
+	<FPNode '790' (2)>
+		<FPNode '772' (1)>
+			<FPNode '629' (1)>
+				<FPNode '553' (1)>
+		<FPNode '959' (1)>
+			<FPNode '946' (1)>
+				<FPNode '173' (1)>
 	<FPNode '592' (5)>
 		<FPNode '578' (1)>
+			<FPNode '599' (1)>
+				<FPNode '459' (1)>
 		<FPNode '60' (1)>
-			<FPNode '117' (1)>
-				<FPNode '578' (1)>
+			<FPNode '578' (1)>
+				<FPNode '117' (1)>
+					<FPNode '868' (1)>
+						<FPNode '360' (1)>
+		<FPNode '946' (1)>
+			<FPNode '709' (1)>
 		<FPNode '117' (1)>
+			<FPNode '737' (1)>
+				<FPNode '439' (1)>
+					<FPNode '173' (1)>
 		<FPNode '874' (1)>
 			<FPNode '123' (1)>
-	<FPNode '306' (4)>
-		<FPNode '981' (1)>
-		<FPNode '790' (1)>
-			<FPNode '813' (1)>
+	<FPNode '981' (1)>
+		<FPNode '306' (1)>
+			<FPNode '553' (1)>
+				<FPNode '432' (1)>
 	<FPNode '994' (3)>
+		<FPNode '425' (1)>
+			<FPNode '371' (1)>
+		<FPNode '629' (1)>
+			<FPNode '599' (1)>
+	<FPNode '815' (2)>
+		<FPNode '629' (1)>
+			<FPNode '62' (1)>
 	<FPNode '214' (2)>
-		<FPNode '813' (1)>
+		<FPNode '858' (1)>
 			<FPNode '837' (1)>
-				<FPNode '858' (1)>
-		<FPNode '127' (1)>
+				<FPNode '813' (1)>
+		<FPNode '790' (1)>
 			<FPNode '772' (1)>
-				<FPNode '790' (1)>
+				<FPNode '127' (1)>
+					<FPNode '733' (1)>
+						<FPNode '395' (1)>
+	<FPNode '970' (1)>
+		<FPNode '628' (1)>
+			<FPNode '444' (1)>
+				<FPNode '395' (1)>
+					<FPNode '325' (1)>
 	<FPNode '456' (5)>
-		<FPNode '38' (1)>
-			<FPNode '60' (1)>
-		<FPNode '934' (2)>
+		<FPNode '60' (2)>
+			<FPNode '38' (1)>
+				<FPNode '371' (1)>
+			<FPNode '444' (1)>
+				<FPNode '371' (1)>
+					<FPNode '325' (1)>
+		<FPNode '994' (2)>
 			<FPNode '981' (1)>
-				<FPNode '994' (1)>
-			<FPNode '994' (1)>
-		<FPNode '60' (1)>
+				<FPNode '934' (1)>
+			<FPNode '934' (1)>
+				<FPNode '69' (1)>
 	<FPNode '127' (2)>
+		<FPNode '7' (1)>
+			<FPNode '607' (1)>
+				<FPNode '221' (1)>
+		<FPNode '628' (1)>
+	<FPNode '599' (1)>
+		<FPNode '432' (1)>
 	<FPNode '124' (9)>
 		<FPNode '988' (1)>
-		<FPNode '837' (1)>
-			<FPNode '981' (1)>
+		<FPNode '981' (1)>
+			<FPNode '837' (1)>
 		<FPNode '416' (2)>
-			<FPNode '306' (1)>
-				<FPNode '772' (1)>
+			<FPNode '772' (1)>
+				<FPNode '306' (1)>
+					<FPNode '69' (1)>
+						<FPNode '628' (1)>
+							<FPNode '360' (1)>
+								<FPNode '154' (1)>
 			<FPNode '858' (1)>
+				<FPNode '154' (1)>
 		<FPNode '592' (2)>
+			<FPNode '827' (1)>
+				<FPNode '815' (1)>
+					<FPNode '62' (1)>
+						<FPNode '371' (1)>
+							<FPNode '221' (1)>
 			<FPNode '707' (1)>
+				<FPNode '7' (1)>
+					<FPNode '607' (1)>
+						<FPNode '601' (1)>
 		<FPNode '214' (1)>
 			<FPNode '316' (1)>
 		<FPNode '60' (1)>
 			<FPNode '578' (1)>
-	<FPNode '778' (6)>
-		<FPNode '806' (1)>
+				<FPNode '459' (1)>
+					<FPNode '173' (1)>
+		<FPNode '613' (1)>
+			<FPNode '459' (1)>
+	<FPNode '806' (7)>
+		<FPNode '778' (1)>
 			<FPNode '214' (1)>
-		<FPNode '874' (1)>
-		<FPNode '36' (1)>
-			<FPNode '790' (1)>
-		<FPNode '813' (1)>
-			<FPNode '981' (1)>
-		<FPNode '214' (2)>
-			<FPNode '123' (1)>
-	<FPNode '123' (2)>
-		<FPNode '673' (1)>
-			<FPNode '820' (1)>
-				<FPNode '934' (1)>
-	<FPNode '806' (6)>
+				<FPNode '733' (1)>
 		<FPNode '123' (1)>
 		<FPNode '36' (1)>
+			<FPNode '709' (1)>
+				<FPNode '601' (1)>
 		<FPNode '578' (1)>
+			<FPNode '959' (1)>
+				<FPNode '744' (1)>
+					<FPNode '209' (1)>
+		<FPNode '553' (1)>
 		<FPNode '38' (1)>
 			<FPNode '132' (1)>
+	<FPNode '934' (2)>
+		<FPNode '820' (1)>
+			<FPNode '673' (1)>
+				<FPNode '123' (1)>
+					<FPNode '601' (1)>
+		<FPNode '316' (1)>
 	<FPNode '416' (6)>
-		<FPNode '682' (2)>
+		<FPNode '682' (1)>
 			<FPNode '36' (1)>
-			<FPNode '778' (1)>
-		<FPNode '38' (3)>
-			<FPNode '127' (1)>
-				<FPNode '858' (1)>
+				<FPNode '559' (1)>
+		<FPNode '38' (1)>
+			<FPNode '629' (1)>
+				<FPNode '439' (1)>
+		<FPNode '858' (1)>
+			<FPNode '38' (1)>
+				<FPNode '127' (1)>
+					<FPNode '559' (1)>
+		<FPNode '778' (1)>
+			<FPNode '682' (1)>
+				<FPNode '970' (1)>
+					<FPNode '628' (1)>
+						<FPNode '368' (1)>
+		<FPNode '981' (1)>
 			<FPNode '813' (1)>
-				<FPNode '981' (1)>
+				<FPNode '38' (1)>
+					<FPNode '909' (1)>
+						<FPNode '444' (1)>
+							<FPNode '209' (1)>
+		<FPNode '599' (1)>
 	<FPNode '238' (1)>
-	<FPNode '874' (2)>
+		<FPNode '368' (1)>
+	<FPNode '772' (2)>
+		<FPNode '970' (1)>
+			<FPNode '737' (1)>
+		<FPNode '60' (1)>
+			<FPNode '132' (1)>
+				<FPNode '119' (1)>
+					<FPNode '607' (1)>
+	<FPNode '874' (1)>
 		<FPNode '813' (1)>
-		<FPNode '988' (1)>
+			<FPNode '946' (1)>
+				<FPNode '744' (1)>
+					<FPNode '733' (1)>
+						<FPNode '7' (1)>
 	<FPNode '682' (5)>
 		<FPNode '119' (1)>
+			<FPNode '909' (1)>
 		<FPNode '456' (1)>
 			<FPNode '820' (1)>
-		<FPNode '874' (1)>
+		<FPNode '874' (2)>
 			<FPNode '238' (1)>
-		<FPNode '707' (1)>
-			<FPNode '874' (1)>
+				<FPNode '425' (1)>
+					<FPNode '360' (1)>
+						<FPNode '246' (1)>
+			<FPNode '707' (1)>
 				<FPNode '934' (1)>
+					<FPNode '559' (1)>
 		<FPNode '988' (1)>
-			<FPNode '119' (1)>
-				<FPNode '858' (1)>
-	<FPNode '673' (2)>
-	<FPNode '837' (1)>
-	<FPNode '707' (4)>
-		<FPNode '119' (2)>
-			<FPNode '238' (1)>
-				<FPNode '673' (1)>
-		<FPNode '316' (1)>
-			<FPNode '820' (1)>
-				<FPNode '837' (1)>
-		<FPNode '127' (1)>
-			<FPNode '238' (1)>
-	<FPNode '316' (3)>
-		<FPNode '934' (1)>
-	<FPNode '988' (3)>
-		<FPNode '36' (1)>
-			<FPNode '117' (1)>
-				<FPNode '820' (1)>
-		<FPNode '117' (1)>
+			<FPNode '858' (1)>
+				<FPNode '119' (1)>
+					<FPNode '744' (1)>
+						<FPNode '709' (1)>
+							<FPNode '69' (1)>
+	<FPNode '778' (5)>
+		<FPNode '874' (1)>
+		<FPNode '790' (1)>
+			<FPNode '36' (1)>
+				<FPNode '395' (1)>
+					<FPNode '325' (1)>
+		<FPNode '981' (1)>
+			<FPNode '813' (1)>
+				<FPNode '868' (1)>
+					<FPNode '737' (1)>
+		<FPNode '214' (2)>
+			<FPNode '123' (1)>
+				<FPNode '959' (1)>
+					<FPNode '827' (1)>
+						<FPNode '62' (1)>
+							<FPNode '613' (1)>
+								<FPNode '553' (1)>
+									<FPNode '459' (1)>
+										<FPNode '221' (1)>
+											<FPNode '154' (1)>
+	<FPNode '827' (1)>
+		<FPNode '613' (1)>
+	<FPNode '425' (1)>
+		<FPNode '173' (1)>
+	<FPNode '988' (4)>
+		<FPNode '874' (1)>
+			<FPNode '69' (1)>
+		<FPNode '820' (1)>
+			<FPNode '36' (1)>
+				<FPNode '117' (1)>
+		<FPNode '238' (1)>
 			<FPNode '132' (1)>
-				<FPNode '238' (1)>
+				<FPNode '117' (1)>
+					<FPNode '970' (1)>
+						<FPNode '909' (1)>
+							<FPNode '868' (1)>
+								<FPNode '827' (1)>
 		<FPNode '578' (1)>
-	<FPNode '132' (2)>
-		<FPNode '673' (1)>
-	<FPNode '820' (1)>
-		<FPNode '858' (1)>
-	<FPNode '117' (1)>
-		<FPNode '837' (1)>
-	<FPNode '790' (1)>
-	<FPNode '60' (1)>
+			<FPNode '154' (1)>
+	<FPNode '439' (1)>
+	<FPNode '613' (1)>
+		<FPNode '607' (1)>
+	<FPNode '306' (2)>
+		<FPNode '246' (1)>
+		<FPNode '946' (1)>
+			<FPNode '439' (1)>
+				<FPNode '209' (1)>
+	<FPNode '123' (1)>
+		<FPNode '868' (1)>
+	<FPNode '432' (1)>
+		<FPNode '209' (1)>
+	<FPNode '673' (3)>
+		<FPNode '132' (1)>
+			<FPNode '959' (1)>
+		<FPNode '909' (1)>
+			<FPNode '62' (1)>
+				<FPNode '425' (1)>
+	<FPNode '837' (2)>
+		<FPNode '117' (1)>
+	<FPNode '707' (4)>
 		<FPNode '119' (1)>
-			<FPNode '132' (1)>
-				<FPNode '772' (1)>
+		<FPNode '673' (1)>
+			<FPNode '238' (1)>
+				<FPNode '119' (1)>
+					<FPNode '368' (1)>
+		<FPNode '837' (1)>
+			<FPNode '820' (1)>
+				<FPNode '316' (1)>
+					<FPNode '815' (1)>
+		<FPNode '238' (1)>
+			<FPNode '127' (1)>
+				<FPNode '444' (1)>
+	<FPNode '316' (2)>
+		<FPNode '486' (2)>
+	<FPNode '733' (1)>
+		<FPNode '7' (1)>
+			<FPNode '486' (1)>
+	<FPNode '486' (1)>
+	<FPNode '132' (1)>
+		<FPNode '709' (1)>
+			<FPNode '601' (1)>
+				<FPNode '246' (1)>
+	<FPNode '858' (1)>
+		<FPNode '820' (1)>
+			<FPNode '432' (1)>
+				<FPNode '360' (1)>
+	<FPNode '744' (1)>
+		<FPNode '325' (1)>
+	<FPNode '368' (1)>
+	<FPNode '395' (1)>
+		<FPNode '221' (1)>
+	<FPNode '813' (1)>
+		<FPNode '790' (1)>
+			<FPNode '306' (1)>
+				<FPNode '559' (1)>
+					<FPNode '246' (1)>
 	<FPNode '36' (1)>
+		<FPNode '737' (1)>
 
 Routes:
+	'790'
+		-<FPNode '790' (2)>
+		-<FPNode '790' (1)>
+		-<FPNode '790' (1)>
+		-<FPNode '790' (1)>
 	'772'
+		-<FPNode '772' (1)>
 		-<FPNode '772' (2)>
 		-<FPNode '772' (1)>
 		-<FPNode '772' (1)>
-		-<FPNode '772' (1)>
-	'790'
-		-<FPNode '790' (1)>
-		-<FPNode '790' (1)>
-		-<FPNode '790' (1)>
-		-<FPNode '790' (1)>
-		-<FPNode '790' (1)>
+	'629'
+		-<FPNode '629' (1)>
+		-<FPNode '629' (1)>
+		-<FPNode '629' (1)>
+		-<FPNode '629' (1)>
+	'553'
+		-<FPNode '553' (1)>
+		-<FPNode '553' (1)>
+		-<FPNode '553' (1)>
+		-<FPNode '553' (1)>
 	'592'
 		-<FPNode '592' (5)>
 		-<FPNode '592' (2)>
@@ -9977,175 +10309,397 @@ Routes:
 		-<FPNode '578' (1)>
 		-<FPNode '578' (1)>
 		-<FPNode '578' (1)>
-	'306'
-		-<FPNode '306' (4)>
-		-<FPNode '306' (1)>
+	'599'
+		-<FPNode '599' (1)>
+		-<FPNode '599' (1)>
+		-<FPNode '599' (1)>
+		-<FPNode '599' (1)>
+	'459'
+		-<FPNode '459' (1)>
+		-<FPNode '459' (1)>
+		-<FPNode '459' (1)>
+		-<FPNode '459' (1)>
 	'981'
 		-<FPNode '981' (1)>
 		-<FPNode '981' (1)>
 		-<FPNode '981' (1)>
 		-<FPNode '981' (1)>
 		-<FPNode '981' (1)>
+	'306'
+		-<FPNode '306' (1)>
+		-<FPNode '306' (2)>
+		-<FPNode '306' (1)>
+		-<FPNode '306' (1)>
+	'432'
+		-<FPNode '432' (1)>
+		-<FPNode '432' (1)>
+		-<FPNode '432' (1)>
+		-<FPNode '432' (1)>
 	'994'
 		-<FPNode '994' (3)>
-		-<FPNode '994' (1)>
-		-<FPNode '994' (1)>
+		-<FPNode '994' (2)>
+	'815'
+		-<FPNode '815' (2)>
+		-<FPNode '815' (1)>
+		-<FPNode '815' (1)>
+	'62'
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
+		-<FPNode '62' (1)>
 	'214'
 		-<FPNode '214' (2)>
 		-<FPNode '214' (1)>
 		-<FPNode '214' (2)>
 		-<FPNode '214' (1)>
-	'813'
-		-<FPNode '813' (1)>
-		-<FPNode '813' (1)>
-		-<FPNode '813' (1)>
-		-<FPNode '813' (1)>
-		-<FPNode '813' (1)>
-	'837'
-		-<FPNode '837' (1)>
-		-<FPNode '837' (1)>
-		-<FPNode '837' (1)>
-		-<FPNode '837' (1)>
-		-<FPNode '837' (1)>
 	'858'
 		-<FPNode '858' (1)>
 		-<FPNode '858' (1)>
 		-<FPNode '858' (1)>
 		-<FPNode '858' (1)>
 		-<FPNode '858' (1)>
+	'837'
+		-<FPNode '837' (1)>
+		-<FPNode '837' (1)>
+		-<FPNode '837' (2)>
+		-<FPNode '837' (1)>
+	'813'
+		-<FPNode '813' (1)>
+		-<FPNode '813' (1)>
+		-<FPNode '813' (1)>
+		-<FPNode '813' (1)>
+		-<FPNode '813' (1)>
+	'970'
+		-<FPNode '970' (1)>
+		-<FPNode '970' (1)>
+		-<FPNode '970' (1)>
+		-<FPNode '970' (1)>
+	'628'
+		-<FPNode '628' (1)>
+		-<FPNode '628' (1)>
+		-<FPNode '628' (1)>
+		-<FPNode '628' (1)>
+	'444'
+		-<FPNode '444' (1)>
+		-<FPNode '444' (1)>
+		-<FPNode '444' (1)>
+		-<FPNode '444' (1)>
+	'395'
+		-<FPNode '395' (1)>
+		-<FPNode '395' (1)>
+		-<FPNode '395' (1)>
+		-<FPNode '395' (1)>
+	'325'
+		-<FPNode '325' (1)>
+		-<FPNode '325' (1)>
+		-<FPNode '325' (1)>
+		-<FPNode '325' (1)>
 	'456'
 		-<FPNode '456' (5)>
 		-<FPNode '456' (1)>
+	'60'
+		-<FPNode '60' (2)>
+		-<FPNode '60' (1)>
+		-<FPNode '60' (1)>
+		-<FPNode '60' (1)>
 	'38'
 		-<FPNode '38' (1)>
-		-<FPNode '38' (3)>
 		-<FPNode '38' (1)>
-	'60'
-		-<FPNode '60' (1)>
-		-<FPNode '60' (1)>
-		-<FPNode '60' (1)>
-		-<FPNode '60' (1)>
-		-<FPNode '60' (1)>
+		-<FPNode '38' (1)>
+		-<FPNode '38' (1)>
+		-<FPNode '38' (1)>
+	'371'
+		-<FPNode '371' (1)>
+		-<FPNode '371' (1)>
+		-<FPNode '371' (1)>
+		-<FPNode '371' (1)>
 	'117'
 		-<FPNode '117' (1)>
 		-<FPNode '117' (1)>
 		-<FPNode '117' (1)>
 		-<FPNode '117' (1)>
 		-<FPNode '117' (1)>
+	'868'
+		-<FPNode '868' (1)>
+		-<FPNode '868' (1)>
+		-<FPNode '868' (1)>
+		-<FPNode '868' (1)>
+	'360'
+		-<FPNode '360' (1)>
+		-<FPNode '360' (1)>
+		-<FPNode '360' (1)>
+		-<FPNode '360' (1)>
 	'127'
 		-<FPNode '127' (2)>
 		-<FPNode '127' (1)>
 		-<FPNode '127' (1)>
 		-<FPNode '127' (1)>
+	'7'
+		-<FPNode '7' (1)>
+		-<FPNode '7' (1)>
+		-<FPNode '7' (1)>
+		-<FPNode '7' (1)>
+	'607'
+		-<FPNode '607' (1)>
+		-<FPNode '607' (1)>
+		-<FPNode '607' (1)>
+		-<FPNode '607' (1)>
+	'221'
+		-<FPNode '221' (1)>
+		-<FPNode '221' (1)>
+		-<FPNode '221' (1)>
+		-<FPNode '221' (1)>
 	'124'
 		-<FPNode '124' (9)>
 	'988'
 		-<FPNode '988' (1)>
+		-<FPNode '988' (4)>
 		-<FPNode '988' (1)>
-		-<FPNode '988' (3)>
-		-<FPNode '988' (1)>
-	'778'
-		-<FPNode '778' (6)>
-		-<FPNode '778' (1)>
 	'806'
-		-<FPNode '806' (1)>
-		-<FPNode '806' (6)>
-	'123'
-		-<FPNode '123' (2)>
-		-<FPNode '123' (1)>
-		-<FPNode '123' (1)>
-		-<FPNode '123' (1)>
-	'673'
-		-<FPNode '673' (1)>
-		-<FPNode '673' (2)>
-		-<FPNode '673' (1)>
-		-<FPNode '673' (1)>
+		-<FPNode '806' (7)>
+	'778'
+		-<FPNode '778' (1)>
+		-<FPNode '778' (5)>
+		-<FPNode '778' (1)>
+	'733'
+		-<FPNode '733' (1)>
+		-<FPNode '733' (1)>
+		-<FPNode '733' (1)>
+		-<FPNode '733' (1)>
+	'934'
+		-<FPNode '934' (2)>
+		-<FPNode '934' (1)>
+		-<FPNode '934' (1)>
+		-<FPNode '934' (1)>
 	'820'
 		-<FPNode '820' (1)>
 		-<FPNode '820' (1)>
 		-<FPNode '820' (1)>
 		-<FPNode '820' (1)>
 		-<FPNode '820' (1)>
-	'934'
-		-<FPNode '934' (1)>
-		-<FPNode '934' (2)>
-		-<FPNode '934' (1)>
-		-<FPNode '934' (1)>
+	'673'
+		-<FPNode '673' (1)>
+		-<FPNode '673' (3)>
+		-<FPNode '673' (1)>
+	'123'
+		-<FPNode '123' (1)>
+		-<FPNode '123' (1)>
+		-<FPNode '123' (1)>
+		-<FPNode '123' (1)>
+		-<FPNode '123' (1)>
+	'601'
+		-<FPNode '601' (1)>
+		-<FPNode '601' (1)>
+		-<FPNode '601' (1)>
+		-<FPNode '601' (1)>
 	'416'
 		-<FPNode '416' (6)>
 		-<FPNode '416' (2)>
 	'682'
-		-<FPNode '682' (2)>
+		-<FPNode '682' (1)>
 		-<FPNode '682' (5)>
+		-<FPNode '682' (1)>
 	'36'
 		-<FPNode '36' (1)>
 		-<FPNode '36' (1)>
 		-<FPNode '36' (1)>
 		-<FPNode '36' (1)>
 		-<FPNode '36' (1)>
+	'559'
+		-<FPNode '559' (1)>
+		-<FPNode '559' (1)>
+		-<FPNode '559' (1)>
+		-<FPNode '559' (1)>
 	'238'
 		-<FPNode '238' (1)>
 		-<FPNode '238' (1)>
 		-<FPNode '238' (1)>
 		-<FPNode '238' (1)>
 		-<FPNode '238' (1)>
+	'368'
+		-<FPNode '368' (1)>
+		-<FPNode '368' (1)>
+		-<FPNode '368' (1)>
+		-<FPNode '368' (1)>
+	'737'
+		-<FPNode '737' (1)>
+		-<FPNode '737' (1)>
+		-<FPNode '737' (1)>
+		-<FPNode '737' (1)>
+	'425'
+		-<FPNode '425' (1)>
+		-<FPNode '425' (1)>
+		-<FPNode '425' (1)>
+		-<FPNode '425' (1)>
 	'874'
+		-<FPNode '874' (1)>
+		-<FPNode '874' (1)>
+		-<FPNode '874' (1)>
 		-<FPNode '874' (2)>
 		-<FPNode '874' (1)>
-		-<FPNode '874' (1)>
-		-<FPNode '874' (1)>
-		-<FPNode '874' (1)>
+	'946'
+		-<FPNode '946' (1)>
+		-<FPNode '946' (1)>
+		-<FPNode '946' (1)>
+		-<FPNode '946' (1)>
+	'744'
+		-<FPNode '744' (1)>
+		-<FPNode '744' (1)>
+		-<FPNode '744' (1)>
+		-<FPNode '744' (1)>
 	'119'
 		-<FPNode '119' (1)>
-		-<FPNode '119' (2)>
 		-<FPNode '119' (1)>
 		-<FPNode '119' (1)>
+		-<FPNode '119' (1)>
+		-<FPNode '119' (1)>
+	'909'
+		-<FPNode '909' (1)>
+		-<FPNode '909' (1)>
+		-<FPNode '909' (1)>
+		-<FPNode '909' (1)>
+	'439'
+		-<FPNode '439' (1)>
+		-<FPNode '439' (1)>
+		-<FPNode '439' (1)>
+		-<FPNode '439' (1)>
+	'827'
+		-<FPNode '827' (1)>
+		-<FPNode '827' (1)>
+		-<FPNode '827' (1)>
+		-<FPNode '827' (1)>
+	'613'
+		-<FPNode '613' (1)>
+		-<FPNode '613' (1)>
+		-<FPNode '613' (1)>
+		-<FPNode '613' (1)>
+	'173'
+		-<FPNode '173' (1)>
+		-<FPNode '173' (1)>
+		-<FPNode '173' (1)>
+		-<FPNode '173' (1)>
+	'69'
+		-<FPNode '69' (1)>
+		-<FPNode '69' (1)>
+		-<FPNode '69' (1)>
+		-<FPNode '69' (1)>
+	'709'
+		-<FPNode '709' (1)>
+		-<FPNode '709' (1)>
+		-<FPNode '709' (1)>
+		-<FPNode '709' (1)>
+	'246'
+		-<FPNode '246' (1)>
+		-<FPNode '246' (1)>
+		-<FPNode '246' (1)>
+		-<FPNode '246' (1)>
+	'209'
+		-<FPNode '209' (1)>
+		-<FPNode '209' (1)>
+		-<FPNode '209' (1)>
+		-<FPNode '209' (1)>
+	'154'
+		-<FPNode '154' (1)>
+		-<FPNode '154' (1)>
+		-<FPNode '154' (1)>
+		-<FPNode '154' (1)>
 	'707'
 		-<FPNode '707' (4)>
 		-<FPNode '707' (1)>
 		-<FPNode '707' (1)>
 	'316'
-		-<FPNode '316' (3)>
+		-<FPNode '316' (2)>
 		-<FPNode '316' (1)>
 		-<FPNode '316' (1)>
+		-<FPNode '316' (1)>
+	'486'
+		-<FPNode '486' (2)>
+		-<FPNode '486' (1)>
+		-<FPNode '486' (1)>
+	'959'
+		-<FPNode '959' (1)>
+		-<FPNode '959' (1)>
+		-<FPNode '959' (1)>
+		-<FPNode '959' (1)>
 	'132'
 		-<FPNode '132' (1)>
-		-<FPNode '132' (2)>
+		-<FPNode '132' (1)>
+		-<FPNode '132' (1)>
 		-<FPNode '132' (1)>
 		-<FPNode '132' (1)>
 
-Frequent Patterns whose appearance is >= min_support(5): 
+Frequent Patterns whose appearance is >= min_support(4): 
 	['124'] 9
 	['416'] 8
-	['592'] 7
-	['778'] 7
 	['806'] 7
+	['778'] 7
 	['682'] 7
-	['214'] 6
-	['456'] 6
+	['592'] 7
 	['988'] 6
 	['874'] 6
 	['707'] 6
-	['772'] 5
-	['790'] 5
-	['578'] 5
-	['306'] 5
-	['981'] 5
+	['456'] 6
+	['214'] 6
 	['994'] 5
-	['813'] 5
-	['837'] 5
+	['981'] 5
+	['934'] 5
 	['858'] 5
-	['38'] 5
+	['837'] 5
+	['820'] 5
+	['813'] 5
+	['790'] 5
+	['772'] 5
+	['673'] 5
 	['60'] 5
-	['117'] 5
+	['578'] 5
+	['38'] 5
+	['36'] 5
+	['316'] 5
+	['306'] 5
+	['238'] 5
+	['132'] 5
 	['127'] 5
 	['123'] 5
-	['673'] 5
-	['820'] 5
-	['934'] 5
-	['36'] 5
-	['238'] 5
 	['119'] 5
-	['316'] 5
-	['132'] 5
+	['117'] 5
+	['970'] 4
+	['959'] 4
+	['946'] 4
+	['909'] 4
+	['868'] 4
+	['827'] 4
+	['815'] 4
+	['744'] 4
+	['737'] 4
+	['733'] 4
+	['709'] 4
+	['7'] 4
+	['69'] 4
+	['629'] 4
+	['628'] 4
+	['62'] 4
+	['613'] 4
+	['607'] 4
+	['601'] 4
+	['599'] 4
+	['559'] 4
+	['553'] 4
+	['486'] 4
+	['459'] 4
+	['444'] 4
+	['439'] 4
+	['432'] 4
+	['425'] 4
+	['395'] 4
+	['371'] 4
+	['368'] 4
+	['360'] 4
+	['325'] 4
+	['246'] 4
+	['221'] 4
+	['209'] 4
+	['173'] 4
+	['154'] 4
+###########################
+Spent Time:0.011554956436157227 s
 ###########################
