@@ -10,7 +10,7 @@
 * Input `python3 FPGrowth.py > [file_name]` (must in `code` folder!) to execute the program & save the results.
 * There's already an `frequent_patterns_output` file in `code` folder that includes the results
 
-* In `report` folder, there are an `experiment` subfolder which includes the experiment results used in the file `Project1_Report.pdf`.
+* In `report` folder, there is an `experiment` subfolder which includes the experiment results used in the file `Project1_Report.pdf`.
 
 ---
 * Remaining details are written in the pdf file `Project1_Report.pdf` in `report` folder.
