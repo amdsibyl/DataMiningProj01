@@ -1,0 +1,53 @@
+Frequent 1-term set with min_support(178):
+['item'] count
+------------------------------
+['Embarked_at_S'] :  644
+['Male'] :  577
+['Not_Survived'] :  549
+['Pclass3'] :  491
+['Adult(19~40)'] :  427
+['Survived'] :  342
+['Female'] :  314
+['Kids(0~8)'] :  231
+['Pclass1'] :  216
+['Pclass2'] :  184
+
+Frequent 2-term set with min_support(178):
+['item'] count
+------------------------------
+['Male', 'Not_Survived'] :  468
+['Embarked_at_S', 'Male'] :  441
+['Embarked_at_S', 'Not_Survived'] :  427
+['Pclass3', 'Not_Survived'] :  372
+['Embarked_at_S', 'Pclass3'] :  353
+['Male', 'Pclass3'] :  347
+['Adult(19~40)', 'Embarked_at_S'] :  339
+['Adult(19~40)', 'Male'] :  282
+['Adult(19~40)', 'Not_Survived'] :  262
+['Survived', 'Female'] :  233
+['Adult(19~40)', 'Pclass3'] :  223
+['Embarked_at_S', 'Survived'] :  217
+['Embarked_at_S', 'Female'] :  203
+
+Frequent 3-term set with min_support(178):
+['item'] count
+------------------------------
+['Embarked_at_S', 'Male', 'Not_Survived'] :  364
+['Male', 'Pclass3', 'Not_Survived'] :  300
+['Embarked_at_S', 'Pclass3', 'Not_Survived'] :  286
+['Embarked_at_S', 'Male', 'Pclass3'] :  265
+['Adult(19~40)', 'Male', 'Not_Survived'] :  231
+['Adult(19~40)', 'Embarked_at_S', 'Male'] :  229
+['Adult(19~40)', 'Embarked_at_S', 'Not_Survived'] :  221
+['Adult(19~40)', 'Embarked_at_S', 'Pclass3'] :  188
+
+Frequent 4-term set with min_support(178):
+['item'] count
+------------------------------
+['Embarked_at_S', 'Not_Survived', 'Male', 'Pclass3'] :  231
+['Embarked_at_S', 'Not_Survived', 'Adult(19~40)', 'Male'] :  194
+
+
+##############################
+Spent Time:0.058988094329833984 s
+##############################

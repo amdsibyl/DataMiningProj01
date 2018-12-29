@@ -1,0 +1,38 @@
+Frequent Patterns whose appearance is >= min_support(178):
+  ['Embarked_at_S'] :  644
+  ['Male'] :  577
+  ['Not_Survived'] :  549
+  ['Pclass3'] :  491
+  ['Male', 'Not_Survived'] :  468
+  ['Embarked_at_S', 'Male'] :  441
+  ['Embarked_at_S', 'Not_Survived'] :  427
+  ['Adult(19~40)'] :  427
+  ['Not_Survived', 'Pclass3'] :  372
+  ['Embarked_at_S', 'Male', 'Not_Survived'] :  364
+  ['Embarked_at_S', 'Pclass3'] :  353
+  ['Male', 'Pclass3'] :  347
+  ['Survived'] :  342
+  ['Embarked_at_S', 'Adult(19~40)'] :  339
+  ['Female'] :  314
+  ['Male', 'Not_Survived', 'Pclass3'] :  300
+  ['Embarked_at_S', 'Not_Survived', 'Pclass3'] :  286
+  ['Male', 'Adult(19~40)'] :  282
+  ['Embarked_at_S', 'Male', 'Pclass3'] :  265
+  ['Not_Survived', 'Adult(19~40)'] :  262
+  ['Survived', 'Female'] :  233
+  ['Male', 'Not_Survived', 'Adult(19~40)'] :  231
+  ['Kids(0~8)'] :  231
+  ['Embarked_at_S', 'Male', 'Not_Survived', 'Pclass3'] :  231
+  ['Embarked_at_S', 'Male', 'Adult(19~40)'] :  229
+  ['Pclass3', 'Adult(19~40)'] :  223
+  ['Embarked_at_S', 'Not_Survived', 'Adult(19~40)'] :  221
+  ['Embarked_at_S', 'Survived'] :  217
+  ['Pclass1'] :  216
+  ['Embarked_at_S', 'Female'] :  203
+  ['Embarked_at_S', 'Male', 'Not_Survived', 'Adult(19~40)'] :  194
+  ['Embarked_at_S', 'Pclass3', 'Adult(19~40)'] :  188
+  ['Pclass2'] :  184
+
+##############################
+Spent Time:0.011029958724975586 s
+##############################
