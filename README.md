@@ -10,7 +10,7 @@
 * Input `python3 HW1_new.py > [file_name]` (must in `code` folder!) to execute the program & save the results.
 * There are already output files in `results` folder
 
-* In `report` folder, there is an `experiment` subfolder which includes the experiment results used in the file `Project1_Report.pdf`.
+* In `report` folder, there is an `experiment` subfolder which includes the experiment results used in the file `Project1_Report_new.pdf`.
 
 ---
 * Remaining details are written in the pdf file `Project1_Report_new.pdf` in `report` folder.
